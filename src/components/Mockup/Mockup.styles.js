@@ -35,11 +35,15 @@ export const mockupStyles = (theme) => css`
 			display: block;
 			background: ${theme.colors.secondaryDark};
 			color: ${rgba(theme.colors.light, 0.5)};
-			padding: 40px;
+			padding: 20px;
 			box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.15),
 				0px 10px 30px rgba(0, 0, 0, 0.3);
 			border-bottom-left-radius: 12px;
 			border-bottom-right-radius: 12px;
+
+			${mq(Breakpoints.lg)} {
+				padding: 40px;
+			}
 
 			& .light {
 				color: ${theme.colors.light};

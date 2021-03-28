@@ -25,7 +25,7 @@ import { Mockup } from "../components/Mockup";
 
 function Index({ posts = [] }) {
 	return (
-		<Page title="Design System">
+		<Page title="A build system designed to automate your WordPress development workflow">
 			<Container>
 				<Space xs={20} lg={150} />
 				<Row gutterLg="medium">
@@ -52,7 +52,7 @@ function Index({ posts = [] }) {
 								value="npx wordpressify"
 								fullWidth={false}
 								onChange={() => {}}
-								spellcheck="false"
+								spellCheck="false"
 							/>
 						</Flex>
 						<Space xs={10} lg="none" />

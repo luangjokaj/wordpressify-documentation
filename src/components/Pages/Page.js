@@ -3,21 +3,21 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 
 export const appleTouchIcon =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/180.png";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/180.png";
 export const favIcon32 =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/32.png";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/32.png";
 export const favIcon16 =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/16.png";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/16.png";
 export const favIcon =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/favicon.ico";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/favicon.ico";
 export const safariPinnedTab =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/512.svg";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/512.svg";
 export const preview =
-	"https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/meta/preview.png";
+	"https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/preview.jpg";
 
 const Page = ({
-	title = "Cherry",
-	description = "Cherry is the foundation for your design system, from design to code. With examples of implementations in modern front-end technologies. Customizable and scalable, ready to be used out-of-the-box.",
+	title = "WordPressify",
+	description = "WordPressify is a modern workflow for your WordPress development, with an integrated database, web server and auto-reload. CSS preprocessors and ES6 ready.",
 	image = preview,
 	children,
 	router,
@@ -31,7 +31,7 @@ const Page = ({
 			/>
 			<meta name="description" content={description} />
 			<link rel="manifest" href="/site.webmanifest" />
-			<meta name="theme-color" content="#F43F5E" />
+			<meta name="theme-color" content="#859A00" />
 			<meta property="og:title" content={title + " - Cherry"} />
 			<meta property="og:description" content={description} />
 			<meta property="og:image" content={image} />
@@ -44,7 +44,7 @@ const Page = ({
 				sizes="180x180"
 				href={appleTouchIcon}
 			/>
-			<link rel="mask-icon" href={safariPinnedTab} color="#F43F5E" />
+			<link rel="mask-icon" href={safariPinnedTab} color="#859A00" />
 			<link rel="icon" type="image/png" sizes="32x32" href={favIcon32} />
 			<link rel="icon" type="image/png" sizes="16x16" href={favIcon16} />
 			<link rel="shortcut icon" href={favIcon} />

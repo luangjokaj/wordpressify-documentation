@@ -1,6 +1,6 @@
 {
-	"name": "Cherry",
-	"short_name": "Cherry",
+	"name": "WordPressify",
+	"short_name": "WordPressify",
 	"icons": [
 		{
 			"src": "https://wordpressify.s3-eu-west-1.amazonaws.com/img/meta/192.png",
@@ -13,7 +13,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#F43F5E",
-	"background_color": "#F43F5E",
+	"theme_color": "#859A00",
+	"background_color": "#859A00",
 	"display": "standalone"
 }

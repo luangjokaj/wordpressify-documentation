@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { rgba } from "polished";
+import { Breakpoints, mq } from "../../assets/styles/mq";
 
 export const mockupStyles = (theme) => css`
 	width: 100%;

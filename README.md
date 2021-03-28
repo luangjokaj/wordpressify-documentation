@@ -1,4 +1,4 @@
-[![WordPressify Logo](https://wordpressify.s3-eu-west-1.amazonaws.com/img/wordpressify-repository-logo.svg)](https://www.wordpressify.co/)
+[![WordPressify Logo](https://wordpressify.s3-eu-west-1.amazonaws.com/img/wordpressify-repository-logo.svg#0)](https://www.wordpressify.co/)
 
 Automate your WordPress development workflow.
 

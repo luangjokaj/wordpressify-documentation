@@ -101,7 +101,8 @@ function Footer({ className }) {
 									rel="noopener noreferrer"
 								>
 									Riangle
-								</a>.
+								</a>
+								.
 							</p>
 							<Space xs="none" lg={20} />
 						</Col>

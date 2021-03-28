@@ -45,7 +45,7 @@ export const projectStyles = (theme) => css`
 		}
 
 		&.cherry {
-			background: #F43F5E;
+			background: #f43f5e;
 
 			@media (hover: hover) {
 				&:hover {

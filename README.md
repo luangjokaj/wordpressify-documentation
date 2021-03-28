@@ -1,11 +1,11 @@
-[![Cherry Logo](https://cherry-documentation.s3-eu-west-1.amazonaws.com/img/cherry-repository-logo.svg#0)](https://www.cherry.design/)
+[![WordPressify Logo](https://wordpressify.s3-eu-west-1.amazonaws.com/img/wordpressify-repository-logo.svg)](https://www.wordpressify.co/)
 
-A design system to build the web.
+Automate your WordPress development workflow.
 
 ---
 
 This is the repository for the documentation website.
-For full documentation, visit https://cherry.design.
+For full documentation, visit https://www.wordpressify.co.
 
 **Technology:**
 - ⚛ [Next.js](https://nextjs.org/)

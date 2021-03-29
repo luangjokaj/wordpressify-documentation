@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
-export function useOnClickOutside(
-	refs,
-	cb,
-) {
+export function useOnClickOutside(refs, cb) {
 	useEffect(() => {
 		function handleClickOutside(event) {
 			if (

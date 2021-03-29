@@ -12,7 +12,7 @@ function Index({ posts = [] }) {
 			<H1 size="hero1">Backups</H1>
 			<p>
 				While coding you will find yourself uploading dummy content to
-				the WordPress build server, e.g. images or other media stored in
+				the WordPress build server, e.g. images or other media stored in{" "}
 				<strong>wp-content</strong>. WordPressify allows you to back up
 				the current state of the build which will include all server
 				files. To back up your build run the command:

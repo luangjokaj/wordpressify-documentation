@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
-import { Space, H1, H2, H3, Box, Link } from "../../components/Layout";
+import { Space, H1 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
 

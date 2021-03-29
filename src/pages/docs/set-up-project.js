@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
-import { Space, H1, H2, H3, Box, Link, H4 } from "../../components/Layout";
+import { Space, H1, H2, H3, H4 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
 
@@ -48,7 +47,7 @@ function Index({ posts = [] }) {
 				description="File structure"
 			/>
 			<Space xs={20} lg={40} />
-			<H3 size="h2">Install WordPressify from NPM</H3>
+			<H2 size="h2">Install WordPressify from NPM</H2>
 			<p>
 				To install WordPressify create a directory for the new WordPress
 				website and from there run the command to generate the file

@@ -23,7 +23,7 @@ function Footer({ className }) {
 					<Row className="first-row">
 						<Col xs={12} lg={6}>
 							<a
-								href="https://github.com/cherry-design-system/?ref=cherry.design"
+								href="https://github.com/cherry-design-system/?ref=wordpressify.co"
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -34,7 +34,7 @@ function Footer({ className }) {
 							<ul>
 								<li>
 									<a
-										href="https://cherry.design/?ref=cherry.design"
+										href="https://cherry.design/?ref=wordpressify.co"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -43,7 +43,7 @@ function Footer({ className }) {
 								</li>
 								<li>
 									<a
-										href="https://www.gopablo.co/?ref=cherry.design"
+										href="https://www.gopablo.co/?ref=wordpressify.co"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -52,7 +52,7 @@ function Footer({ className }) {
 								</li>
 								<li>
 									<a
-										href="https://www.wordpressify.co/?ref=cherry.design"
+										href="https://www.wordpressify.co/?ref=wordpressify.co"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -61,7 +61,7 @@ function Footer({ className }) {
 								</li>
 								<li>
 									<a
-										href="https://www.nextify.me/?ref=cherry.design"
+										href="https://www.nextify.me/?ref=wordpressify.co"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -70,7 +70,7 @@ function Footer({ className }) {
 								</li>
 								<li>
 									<a
-										href="https://www.fuzzymail.co/?ref=cherry.design"
+										href="https://www.fuzzymail.co/?ref=wordpressify.co"
 										target="_blank"
 										rel="noreferrer"
 									>
@@ -86,7 +86,7 @@ function Footer({ className }) {
 						<Col xs={12} lg={6} className="left-col">
 							<Space xs={40} lg={100} />
 							<a
-								href="https://www.riangle.com/?ref=cherry.design"
+								href="https://www.riangle.com/?ref=wordpressify.co"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="icon-link"
@@ -96,7 +96,7 @@ function Footer({ className }) {
 							<p>
 								Powered by{" "}
 								<a
-									href="https://www.riangle.com/?ref=cherry.design"
+									href="https://www.riangle.com/?ref=wordpressify.co"
 									target="_blank"
 									rel="noopener noreferrer"
 								>

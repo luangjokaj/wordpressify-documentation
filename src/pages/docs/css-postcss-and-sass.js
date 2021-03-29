@@ -7,7 +7,6 @@ import { CodeBlock } from "../../components/CodeBlock";
 
 const pluginsCode = `const pluginsListDev = [
     partialimport,
-    postCSSMixins,
     postcssPresetEnv({
         stage: 0,
         features: {
@@ -16,11 +15,12 @@ const pluginsCode = `const pluginsListDev = [
             'custom-media': true,
         },
     }),
+    postCSSMixins,
+    autoprefixer
 ];
 
 const pluginsListProd = [
     partialimport,
-    postCSSMixins,
     postcssPresetEnv({
         stage: 0,
         features: {
@@ -29,6 +29,8 @@ const pluginsListProd = [
             'custom-media': true,
         },
     }),
+    postCSSMixins,
+    autoprefixer,
     require('cssnano')({
         preset: ['default', {
             discardComments: false,

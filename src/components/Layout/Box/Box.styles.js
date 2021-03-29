@@ -82,5 +82,7 @@ export const boxStyles = (theme, isLink, noPadding, isVideo) => css`
 		position: absolute;
 		left: 0;
 		top: 0;
+		overflow: hidden;
+		border-radius: 12px;
 	}
 `;

@@ -102,12 +102,10 @@ export const sidebarStyles = (theme, isMenuOpen) => css`
 				transition: all 0.3s ease;
 				max-height: 0;
 				overflow: hidden;
-				pointer-events: none;
 				opacity: 0;
 
 				&.active {
 					max-height: 2000px;
-					pointer-events: all;
 					opacity: 1;
 				}
 

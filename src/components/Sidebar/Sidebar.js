@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Burger } from "../Layout/Burger";
 import { DropDown } from "../../assets/svg/DropDown";
 import { navigationData } from "./navigation-data";
 import { sidebarStyles } from "./Sidebar.styles";
+import { useOnClickOutside } from "../useOnClickOutside";
 
 function Sidebar({ className }) {
 	const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,6 +17,8 @@ function Sidebar({ className }) {
 		"other",
 	]);
 	const router = useRouter();
+	const wrapperRef = useRef(null);
+	const headerRef = useRef(null);
 
 	return (
 		<>
@@ -78,6 +81,11 @@ function Sidebar({ className }) {
 																childItem.href
 																	? "active"
 																	: ""
+															}
+															onClick={() =>
+																setMenuOpen(
+																	false,
+																)
 															}
 														>
 															{childItem.label}
@@ -170,6 +178,11 @@ function Sidebar({ className }) {
 																					subItem.href
 																						? "active"
 																						: ""
+																				}
+																				onClick={() =>
+																					setMenuOpen(
+																						false,
+																					)
 																				}
 																			>
 																				{

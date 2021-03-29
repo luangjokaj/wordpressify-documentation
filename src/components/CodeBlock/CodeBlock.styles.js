@@ -1,5 +1,17 @@
 import { css } from "@emotion/react";
 
+export const syntaxWrapperStyles = (theme) => css`
+	& pre {
+		margin: 10px 0 !important;
+		background: ${theme.colors.secondaryDark} !important;
+		font-family: ${theme.fonts.mono};
+
+		& code {
+			background: ${theme.colors.secondaryDark} !important;
+		}
+	}
+`;
+
 export const boxDescriptionStyles = (theme) => css`
 	border: solid 1px ${theme.colors.gray};
 	border-bottom-left-radius: 12px;

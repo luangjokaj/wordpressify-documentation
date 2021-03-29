@@ -41,6 +41,7 @@ export const mockupStyles = (theme) => css`
 				0px 10px 30px rgba(0, 0, 0, 0.3);
 			border-bottom-left-radius: 12px;
 			border-bottom-right-radius: 12px;
+			font-family: ${theme.fonts.mono};
 
 			${mq(Breakpoints.lg)} {
 				padding: 40px;

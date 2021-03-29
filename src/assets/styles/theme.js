@@ -36,7 +36,7 @@ const theme = {
 		text: "'Inter', sans-serif",
 		head: "'Inter', sans-serif",
 		special: "'Inter', sans-serif",
-		mono: "'Inter', monospace",
+		mono: "'Roboto Mono', monospace",
 	},
 	sizes: {
 		hero1: {

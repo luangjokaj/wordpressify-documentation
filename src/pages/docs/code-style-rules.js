@@ -27,7 +27,7 @@ function Index({ posts = [] }) {
 				with the command:
 			</p>
 			<CodeBlock language="shell" value={`npm run lint:css`} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav href="/docs/backups" as="/docs/backups" prev>
 					Backups

@@ -42,7 +42,7 @@ function Index({ posts = [] }) {
 			<CodeBlock language="shell" value={`src/assets/fonts/`} />
 			<p>Then you can include them in your CSS:</p>
 			<CodeBlock language="css" value={fontCode} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/css-postcss-and-sass"

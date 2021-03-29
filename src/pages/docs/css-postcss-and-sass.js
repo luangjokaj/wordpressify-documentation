@@ -123,7 +123,7 @@ function Index({ posts = [] }) {
 				all other imports are included in the stylesheets.
 			</p>
 			<CodeBlock language="css" value={themeCssCode} />
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
 			<Space size={10} />
 			<H4 size="h1">Sass</H4>
@@ -154,7 +154,7 @@ function Index({ posts = [] }) {
 			/>
 			<p>Change the gulp tasks styleProd to:</p>
 			<CodeBlock language="js" value={sassProdTaskCode} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/set-up-project"

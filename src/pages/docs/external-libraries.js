@@ -29,7 +29,9 @@ function Index({ posts = [] }) {
 				installing the npm script and including it in the{" "}
 				<strong>gulpfile.js</strong>
 			</p>
+			<Space size={1} />
 			<CodeBlock language="js" value={jsCode} />
+			<Space size={1} />
 			<p>
 				You can include the scripts in the head of the page before the
 				DOM is loaded by placing them in the <strong>headerJS</strong>{" "}

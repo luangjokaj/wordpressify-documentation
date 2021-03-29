@@ -25,7 +25,7 @@ function Index({ posts = [] }) {
 				containers:
 			</p>
 			<CodeBlock language="shell" value={`npm run env:rebuild`} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/external-libraries"

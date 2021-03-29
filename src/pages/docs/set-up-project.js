@@ -46,7 +46,7 @@ function Index({ posts = [] }) {
 				value={fileStructureCode}
 				description="File structure"
 			/>
-			<Space xs={20} lg={40} />
+			<Space size={30} />
 			<H2 size="h2">Install WordPressify from NPM</H2>
 			<p>
 				To install WordPressify create a directory for the new WordPress
@@ -89,7 +89,7 @@ function Index({ posts = [] }) {
 			<H4 size="h5">Install dependencies</H4>
 			<Space size={10} />
 			<CodeBlock language="shell" value={`npm install`} />
-			<Space size={20} />
+			<Space size={10} />
 			<H4 size="h5">Build environment</H4>
 			<p>
 				On the first run, WordPressify needs to set up a local server

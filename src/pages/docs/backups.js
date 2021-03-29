@@ -23,7 +23,7 @@ function Index({ posts = [] }) {
 				directory:
 			</p>
 			<CodeBlock language="shell" value={`backups/`} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/change-php-and-docker-settings"

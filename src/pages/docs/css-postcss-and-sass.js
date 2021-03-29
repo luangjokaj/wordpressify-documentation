@@ -158,7 +158,7 @@ function Index({ posts = [] }) {
 				language="js"
 				value={`watch('./src/assets/css/**/*.scss', stylesDev);`}
 			/>
-			<p>Change the gulp tasks styleProd to:</p>
+			<p>Change the gulp tasks stylesProd to:</p>
 			<CodeBlock language="js" value={sassProdTaskCode} />
 			<Space size={10} />
 			<DocNavWrapper>

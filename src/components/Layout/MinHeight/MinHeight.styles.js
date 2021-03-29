@@ -3,6 +3,7 @@ import { Breakpoints, mq } from "../../../assets/styles/mq";
 
 export const minHeightStyles = (theme) => css`
 	min-height: calc(100vh - ${theme.spacing.paddingTopBody.mobile});
+	overflow-x: hidden;
 
 	${mq(Breakpoints.lg)} {
 		min-height: calc(100vh - ${theme.spacing.paddingTopBody.desktop});

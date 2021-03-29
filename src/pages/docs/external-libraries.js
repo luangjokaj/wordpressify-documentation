@@ -30,8 +30,8 @@ function Index({ posts = [] }) {
 				<strong>gulpfile.js</strong>
 			</p>
 			<Space size={1} />
-			<CodeBlock language="js" value={jsCode} />
-			<Space size={1} />
+			<CodeBlock language="js" value={jsCode} description="gulpfile.js" />
+			<Space size={10} />
 			<p>
 				You can include the scripts in the head of the page before the
 				DOM is loaded by placing them in the <strong>headerJS</strong>{" "}

@@ -122,8 +122,12 @@ function Index({ posts = [] }) {
 				The template definitions are located here too. It is also where
 				all other imports are included in the stylesheets.
 			</p>
-			<CodeBlock language="css" value={themeCssCode} />
-			<Space size={1} />
+			<CodeBlock
+				language="css"
+				value={themeCssCode}
+				description="src/assets/css/style.css"
+			/>
+			<Space size={10} />
 			<hr />
 			<Space size={10} />
 			<H4 size="h1">Sass</H4>

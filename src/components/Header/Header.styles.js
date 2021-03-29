@@ -66,9 +66,11 @@ export const headerStyles = (theme, isLoaded) => css`
 			display: flex;
 			width: 100%;
 			justify-content: center;
+			max-width: calc(100%);
 
 			${isLoaded &&
 			css`
+				max-width: calc(100% - 90px);
 				width: 270px;
 			`}
 

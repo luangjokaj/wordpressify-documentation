@@ -10,13 +10,10 @@ function Sidebar({ className }) {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [activeMenus, setActiveMenus] = useState([
 		"start",
-		"design",
-		"code",
-		"sass",
-		"postcss",
-		"react",
-		"scale",
-		"boilerplates",
+		"customization",
+		"build-utilities",
+		"production",
+		"other",
 	]);
 	const router = useRouter();
 

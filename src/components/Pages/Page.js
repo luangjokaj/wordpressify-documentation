@@ -49,7 +49,7 @@ const Page = ({
 			<link rel="icon" type="image/png" sizes="16x16" href={favIcon16} />
 			<link rel="shortcut icon" href={favIcon} />
 
-			<title>{title + " - Cherry"}</title>
+			<title>{title + " - WordPressify"}</title>
 		</Head>
 		{children}
 	</React.Fragment>

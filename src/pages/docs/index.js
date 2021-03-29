@@ -2,74 +2,56 @@ import React from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
-import { Space, H1, Row, Col, Box } from "../../components/Layout";
+import { Space, H1, Box } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 
 function Index({ posts = [] }) {
 	return (
 		<Page
 			title="Documentation"
-			description="Cherry is the starting point for your design system. It comes with a minimal set of pre-defined styles for the most common web patterns."
+			description="WordPressify is a simple tool that helps you build WordPress themes and plugins. It takes care of the development experience by providing a web server with a database out of the box, zero-configuration required."
 		>
 			<Space xs={20} lg={40} />
-			<H1 size="hero1">Getting started with Cherry Design System</H1>
+			<H1 size="hero1">Getting started with WordPressify</H1>
 			<Space xs={10} lg={30} />
 			<p>
-				Cherry is the starting point for your design system. It comes
-				with a minimal set of pre-defined styles for the most common web
-				patterns. It covers the design aspects of your website by
-				providing a Figma template with the original designs. Each
-				element of the design system is implemented in code using
-				various modern fron-end technologies. This facilitates
-				co-creation from design to code. If you are not a designer you
-				can still use Cherry components to build your layouts
-				out-of-the-box.
+				WordPressify is a simple tool that helps you build WordPress
+				themes and plugins. It takes care of the development experience
+				by providing a web server with a database out of the box,
+				zero-configuration required.
+				<br />
+				<br />
+				WordPressify comes with a development server for running PHP
+				under a proxy with BrowserSync. The data is stored in a
+				pre-configured MariaDB database that works out of the box.
+				Watches for all your changes and reloads the webpage in
+				real-time. Style are preprocessors with PostCSS or Sass. Babel
+				compiler for writing next-generation JavaScript. Source maps are
+				supported for both CSS and JavaScript. WordPressify allows easy
+				import of external JavaScript libraries and npm scripts, it has
+				a flexible build and can be easily customized with gulp tasks.
 			</p>
+			<Space size={10} />
+			<Box noPadding isVideo>
+				<iframe
+					height="315"
+					src="https://www.youtube.com/embed/o4MQYidejN4"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					className="video"
+				></iframe>
+			</Box>
 			<Space size={20} />
-			<Row>
-				<Col xs={12} lg={4} textAlign="center">
-					<Box href="/docs/design" as="/docs/design">
-						<Image
-							src="/img/design.png"
-							alt="Design illustration"
-							width={94.6}
-							height={127}
-						/>
-						<strong data-secondary>Design</strong>
-					</Box>
-				</Col>
-				<Col xs={12} lg={4} textAlign="center">
-					<Space xs={20} lg="none" />
-					<Box href="/docs/code" as="/docs/code">
-						<Image
-							src="/img/code.png"
-							alt="Code illustration"
-							width={113.89}
-							height={127}
-						/>
-						<strong data-tertiary>Code</strong>
-					</Box>
-				</Col>
-				<Col xs={12} lg={4} textAlign="center">
-					<Space xs={20} lg="none" />
-					<Box href="/docs/scale" as="/docs/scale">
-						<Image
-							src="/img/scale.png"
-							alt="Scale illustration"
-							width={138.37}
-							height={127}
-						/>
-						<strong data-primary>Scale</strong>
-					</Box>
-					<Space size={20} />
-				</Col>
-			</Row>
 			<DocNavWrapper>
 				<DocNav href="/" as="/" prev>
 					Home
 				</DocNav>
-				<DocNav href="/docs/design" as="/docs/design" next>
-					Design Introduction
+				<DocNav
+					href="/docs/installing-nodejs-and-docker"
+					as="/docs/installing-nodejs-and-docker"
+					next
+				>
+					Installing Node.js and Docker
 				</DocNav>
 			</DocNavWrapper>
 		</Page>

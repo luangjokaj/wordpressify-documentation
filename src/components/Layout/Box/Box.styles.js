@@ -5,7 +5,7 @@ import {
 } from "../../../assets/styles/helperStyles";
 import { Breakpoints, mq } from "../../../assets/styles/mq";
 
-export const boxStyles = (theme, isLink, noPadding) => css`
+export const boxStyles = (theme, isLink, noPadding, isVideo) => css`
 	line-height: 0;
 	border-radius: 12px;
 	${shadowStyles};
@@ -18,6 +18,12 @@ export const boxStyles = (theme, isLink, noPadding) => css`
 		: css`
 				padding: 20px;
 		  `}
+
+	${isVideo &&
+	css`
+		padding-top: 56.25%;
+		position: relative;
+	`}
 
 	${isLink &&
 	css`
@@ -68,5 +74,13 @@ export const boxStyles = (theme, isLink, noPadding) => css`
 	& [data-tertiary] {
 		display: block;
 		color: ${theme.colors.tertiary};
+	}
+
+	& .video {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 `;

@@ -24,7 +24,7 @@ function Index({ posts = [] }) {
 				under a proxy with BrowserSync. The data is stored in a
 				pre-configured MariaDB database that works out of the box.
 				Watches for all your changes and reloads the webpage in
-				real-time. Styles are preprocessors with PostCSS or Sass. Babel
+				real-time. Styles are preprocessed with PostCSS or Sass. Babel
 				compiler for writing next-generation JavaScript. Source maps are
 				supported for both CSS and JavaScript. WordPressify allows easy
 				import of external JavaScript libraries and npm scripts, it has

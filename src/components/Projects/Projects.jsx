@@ -42,7 +42,7 @@ function Projects() {
 							width={293.9}
 							height={110}
 						/>
-						<p>Automate your WordPress development workflow.</p>
+						<p>Create optimized static websites.</p>
 					</span>
 				</a>
 				<a

@@ -7,14 +7,6 @@ import { Space } from "../Layout";
 function Mockup() {
 	return (
 		<>
-			<Head>
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-					rel="preload"
-					as="style"
-				/>
-			</Head>
 			<div css={(theme) => mockupStyles(theme)}>
 				<Space xs={20} lg={80} />
 				<div className="window">

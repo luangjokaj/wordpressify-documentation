@@ -162,10 +162,6 @@ const animation = keyframes`
 		transform: translate3d(0,0,0) translateX(-50%) scaleX(0) translateY(-100%) scaleY(1);
 	}
 
-	30% {
-		transform: translate3d(0,0,0) translateX(-50%) scaleX(1)  translateY(-100%) scaleY(1);
-	}
-
 	100% {
 		transform: translate3d(0,0,0) translateX(-50%) scaleX(1)  translateY(-100%) scaleY(0);
 	}

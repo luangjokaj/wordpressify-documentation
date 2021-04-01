@@ -11,7 +11,8 @@ function CodeBlock({ language, value, description }) {
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
 					href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-					rel="stylesheet"
+					rel="preload"
+					as="style"
 				/>
 			</Head>
 			<div css={(theme) => syntaxWrapperStyles(theme)}>

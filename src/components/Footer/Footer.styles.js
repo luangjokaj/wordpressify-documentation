@@ -90,6 +90,7 @@ export const footerStyles = (theme) => css`
 						& small {
 							opacity: 0.8;
 						}
+
 						& .star {
 							& path {
 								stroke: ${theme.colors.primaryDark};

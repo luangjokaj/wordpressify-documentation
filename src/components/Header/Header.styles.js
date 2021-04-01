@@ -36,28 +36,48 @@ export const headerStyles = (theme, isLoaded) => css`
 		position: relative;
 		overflow: hidden;
 
+		&:before,
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
-			left: 50%;
-			transform: translate3d(0, 0, 0) translateX(-50%) scaleX(0) scaleY(1)
-				translateY(-100%);
-			background: ${theme.colors.primary};
 			z-index: 9999;
 			height: 5px;
 			width: 100%;
 			bottom: -6px;
 			transition: all 0.3s ease;
+			pointer-events: none;
+		}
+
+		&:after {
+			left: 50%;
+			transform: translate3d(0, 0, 0) translateX(-50%) scaleX(0)
+				translateY(-100%) scaleY(1);
+			background: ${theme.colors.primary};
 			opacity: 1;
-			z-index: 9999;
 			transform-origin: center bottom;
 
 			${isLoaded &&
 			css`
-				transform: translate3d(0, 0, 0) translateX(-50%) scaleX(1)
-					scaleY(1);
 				animation: ${animation} forwards 1 2s;
+			`}
+		}
+
+		&:before {
+			height: 5px;
+			width: 100%;
+			left: 0;
+			bottom: -6px;
+			background: ${theme.colors.light};
+			position: absolute;
+			transform: translate3d(0, 0, 0) scaleX(1) translateY(-100%)
+				scaleY(1);
+			opacity: 1;
+			transition-delay: 1.3s;
+
+			${isLoaded &&
+			css`
+				opacity: 0;
 			`}
 		}
 
@@ -160,6 +180,10 @@ export const headerStyles = (theme, isLoaded) => css`
 const animation = keyframes`
 	0% {
 		transform: translate3d(0,0,0) translateX(-50%) scaleX(0) translateY(-100%) scaleY(1);
+	}
+
+	30% {
+		transform: translate3d(0,0,0) translateX(-50%) scaleX(1)  translateY(-100%) scaleY(1);
 	}
 
 	100% {

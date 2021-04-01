@@ -15,7 +15,6 @@ function Footer({ className }) {
 	const [stars, setStars] = useState(null);
 
 	const fetchGitHubStars = async () => {
-		console.log("yeep");
 		await fetch("https://api.github.com/repos/luangjokaj/wordpressify")
 			.then((response) => response.json())
 			.then((data) => {

@@ -70,6 +70,7 @@ export const footerStyles = (theme) => css`
 					border-left: solid 1px ${theme.colors.gray};
 					transform: translateY(1px);
 					opacity: 0.5;
+					transition: all 0.3s ease;
 
 					${mq(Breakpoints.lg)} {
 						font-size: ${theme.sizes.small.mobile};
@@ -86,6 +87,9 @@ export const footerStyles = (theme) => css`
 
 				@media (hover: hover) {
 					&:hover {
+						& small {
+							opacity: 0.8;
+						}
 						& .star {
 							& path {
 								stroke: ${theme.colors.primaryDark};

@@ -46,7 +46,7 @@ function Index({ posts = [] }) {
 				value={fileStructureCode}
 				description="File structure"
 			/>
-			<Space size={30} />
+			<Space size={20} />
 			<H2 size="h2">Install WordPressify from NPM</H2>
 			<p>
 				To install WordPressify create a directory for the new WordPress
@@ -64,9 +64,9 @@ function Index({ posts = [] }) {
 				Make sure Docker is running, otherwise this ☝ command will
 				fail.
 			</p>
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H3 size="h2">Install WordPressify from Repository</H3>
 			<p>
 				To install WordPressify you need to clone the repository from
@@ -101,9 +101,9 @@ function Index({ posts = [] }) {
 				Make sure Docker is running, otherwise this ☝ command will
 				fail.
 			</p>
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H4 size="h5">Change template name</H4>
 			<Space size={10} />
 			<p>
@@ -123,9 +123,9 @@ function Index({ posts = [] }) {
 				Make sure Docker is running, otherwise this ☝ command will
 				fail.
 			</p>
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H4 size="h5">Bring down environment</H4>
 			<p>
 				To stop the WordPressify server and database for the project
@@ -136,24 +136,24 @@ function Index({ posts = [] }) {
 			<H4 size="h5">Rebuild environment</H4>
 			<p>To rebuild the WordPressify project environment run:</p>
 			<CodeBlock language="shell" value={`npm run env:rebuild`} />
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H4 size="h2">WordPress Plugins</H4>
 			<p>
 				If you want to add or build WordPress plugins, you can do that
 				from the directory:
 			</p>
 			<CodeBlock language="shell" value={`src/plugins`} />
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H4 size="h2">Production Template</H4>
 			<p>To generate your distribution files run the command:</p>
 			<CodeBlock language="shell" value={`npm run prod`} />
 			<p>The template will be saved as a zip file in:</p>
 			<CodeBlock language="shell" value={`dist/wordpressify.zip`} />
-			<Space size={20} />
+			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/installing-nodejs-and-docker"

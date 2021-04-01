@@ -20,7 +20,7 @@ function Index({ posts = [] }) {
 			<CodeBlock language="shell" value={`src/assets/js/`} />
 			<p>
 				WordPressify will watch for changes under the{" "}
-				<strong>js</strong> directory and bundle the code in a single
+				<strong>js/</strong> directory and bundle the code in a single
 				file, which will be included in the footer of the page as:
 			</p>
 			<CodeBlock language="shell" value={`footer-bundle.js`} />

@@ -59,9 +59,9 @@ function Index({ posts = [] }) {
 				After setting up your IDE, select <strong>Debug</strong> in the
 				Xdebug extension and reload the page.
 			</p>
-			<Space size={10} />
+			<Space size={1} />
 			<hr />
-			<Space size={10} />
+			<Space size={1} />
 			<H2>Xdebug on Linux</H2>
 			<p>
 				After setting up your IDE, select <strong>Debug</strong> in the

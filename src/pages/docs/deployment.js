@@ -53,6 +53,7 @@ function Index({ posts = [] }) {
 			</p>
 			<Space size={10} />
 			<H2>Automated Deployments</H2>
+			<Space size={10} />
 			<p>
 				<strong>Push-to-Deploy</strong>&nbsp;if you want automatic
 				deployments to happen when you do a push to the distribution

@@ -41,7 +41,7 @@ export const footerStyles = (theme) => css`
 
 			& svg {
 				vertical-align: middle;
-				transform: translateY(-2px);
+				transform: translateY(-1px);
 				margin-right: 5px;
 
 				& path {
@@ -52,6 +52,46 @@ export const footerStyles = (theme) => css`
 			@media (hover: hover) {
 				&:hover {
 					color: ${theme.colors.primaryDark};
+				}
+			}
+
+			&.github-stars {
+				& span,
+				& small {
+					vertical-align: middle;
+				}
+
+				& small {
+					font-size: ${theme.sizes.small.mobile};
+					display: inline-block;
+					margin: 0 0 0 2px;
+					padding: 0 0 0 7px;
+					line-height: 1;
+					border-left: solid 1px ${theme.colors.gray};
+					transform: translateY(1px);
+					opacity: 0.5;
+
+					${mq(Breakpoints.lg)} {
+						font-size: ${theme.sizes.small.mobile};
+						line-height: 1;
+					}
+				}
+
+				& .star {
+					margin: 0 0 0 2px;
+					& path {
+						fill: none;
+					}
+				}
+
+				@media (hover: hover) {
+					&:hover {
+						& .star {
+							& path {
+								stroke: ${theme.colors.primaryDark};
+							}
+						}
+					}
 				}
 			}
 		}

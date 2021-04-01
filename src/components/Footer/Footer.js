@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Space } from "../Layout";
 import { Logo } from "../../assets/svg/Logo";
 import { Riangle } from "../../assets/svg/Riangle";
+import { Star } from "../../assets/svg/Star";
 import {
 	footerStyles,
 	footerLeftColStyles,
@@ -11,6 +12,21 @@ import { Socials } from "../Socials/Socials";
 import { GitHub } from "../../assets/svg/GitHub";
 
 function Footer({ className }) {
+	const [stars, setStars] = useState(null);
+
+	const fetchGitHubStars = async () => {
+		console.log("yeep");
+		await fetch("https://api.github.com/repos/luangjokaj/wordpressify")
+			.then((response) => response.json())
+			.then((data) => {
+				setStars(data.stargazers_count);
+			});
+	};
+
+	useEffect(() => {
+		return fetchGitHubStars();
+	}, []);
+
 	return (
 		<>
 			<Socials />
@@ -23,8 +39,14 @@ function Footer({ className }) {
 								href="https://github.com/cherry-design-system/?ref=wordpressify.co"
 								target="_blank"
 								rel="noreferrer"
+								className="github-stars"
 							>
-								<GitHub /> <span>GitHub</span>
+								<GitHub /> <span>GitHub</span>{" "}
+								{stars && (
+									<small>
+										{stars} <Star />
+									</small>
+								)}
 							</a>
 						</Col>
 						<Col xs={12} lg={6}>

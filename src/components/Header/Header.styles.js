@@ -71,10 +71,12 @@ export const headerStyles = (theme, isLoaded) => css`
 			display: flex;
 			width: 100%;
 			justify-content: center;
+			max-width: 100%;
 
 			${isLoaded &&
 			css`
-				width: 136px;
+				max-width: calc(100% - 90px);
+				width: 272px;
 			`}
 
 			& svg {

@@ -25,6 +25,7 @@ export const headerStyles = (theme, isLoaded) => css`
 
 	& .container {
 		margin: auto;
+		overflow: hidden;
 	}
 
 	& .inner-wrapper {
@@ -33,20 +34,24 @@ export const headerStyles = (theme, isLoaded) => css`
 		justify-content: flex-end;
 		border-bottom: solid 1px ${theme.colors.grayLight};
 		position: relative;
+		overflow: hidden;
 
-		&:before {
+		&:after {
 			content: "";
 			display: block;
 			position: absolute;
 			left: 50%;
-			transform: translate3d(0, 0, 0) translateX(-50%) scaleX(0) scaleY(1);
+			transform: translate3d(0, 0, 0) translateX(-50%) scaleX(0) scaleY(1)
+				translateY(-100%);
 			background: ${theme.colors.primary};
 			z-index: 9999;
 			height: 5px;
 			width: 100%;
-			bottom: -4px;
+			bottom: -6px;
 			transition: all 0.3s ease;
 			opacity: 1;
+			z-index: 9999;
+			transform-origin: center bottom;
 
 			${isLoaded &&
 			css`
@@ -66,12 +71,10 @@ export const headerStyles = (theme, isLoaded) => css`
 			display: flex;
 			width: 100%;
 			justify-content: center;
-			max-width: calc(100%);
 
 			${isLoaded &&
 			css`
-				max-width: calc(100% - 90px);
-				width: 270px;
+				width: 136px;
 			`}
 
 			& svg {
@@ -154,10 +157,14 @@ export const headerStyles = (theme, isLoaded) => css`
 
 const animation = keyframes`
 	0% {
-		transform: translate3d(0,0,0) translateX(-50%) scaleX(0) scaleY(1);
+		transform: translate3d(0,0,0) translateX(-50%) scaleX(0) translateY(-100%) scaleY(1);
+	}
+
+	30% {
+		transform: translate3d(0,0,0) translateX(-50%) scaleX(1)  translateY(-100%) scaleY(1);
 	}
 
 	100% {
-		transform: translate3d(0,0,0) translateX(-50%) scaleX(1) scaleY(0);
+		transform: translate3d(0,0,0) translateX(-50%) scaleX(1)  translateY(-100%) scaleY(0);
 	}
 `;

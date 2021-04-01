@@ -1,7 +1,7 @@
 const theme = {
 	spacing: {
 		maxWidth: "1280px",
-		maxWidthLimit: "1440px",
+		maxWidthLimit: "1280px",
 		paddingTopBody: { mobile: "76px", desktop: "76px" },
 		marginContainer: { mobile: "20px", desktop: "20px" },
 		marginRow: { default: "-10px", medium: "-30px", big: "-50px" },

@@ -7,7 +7,7 @@ export const colorBoxStyles = (theme, value, border) => css`
 	justify-content: space-between;
 	${shadowStyles};
 	border-radius: 30px;
-	padding: 24px;
+	padding: 15px;
 
 	${mq(Breakpoints.lg)} {
 		display: inline-flex;

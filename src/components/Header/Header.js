@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { Logo } from "../../assets/svg/Logo";
 import { GitHub } from "../../assets/svg/GitHub";
 import { Container } from "../Layout";
 import { headerStyles } from "./Header.styles";
 
 function Header() {
-	const router = useRouter();
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	useEffect(() => {
@@ -16,11 +14,8 @@ function Header() {
 
 	return (
 		<header css={(theme) => headerStyles(theme, isLoaded)}>
-			<Container
-				fluid={router.pathname.includes("/docs")}
-				className="container"
-			>
-				<div className="inner-wrapper">
+			<Container className="container">
+				<div className="inner-wrapper" id="header-inner">
 					<Link href="/" as="/">
 						<a className="logo">
 							<Logo />

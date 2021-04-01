@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import { Col, Container, Row, Space } from "../Layout";
 import { Logo } from "../../assets/svg/Logo";
 import { Riangle } from "../../assets/svg/Riangle";
@@ -12,13 +11,11 @@ import { Socials } from "../Socials/Socials";
 import { GitHub } from "../../assets/svg/GitHub";
 
 function Footer({ className }) {
-	const router = useRouter();
-
 	return (
 		<>
 			<Socials />
 			<footer className={className} css={(theme) => footerStyles(theme)}>
-				<Container fluid={router.pathname.includes("/docs")}>
+				<Container>
 					<Space xs={40} lg={80} />
 					<Row className="first-row">
 						<Col xs={12} lg={6}>

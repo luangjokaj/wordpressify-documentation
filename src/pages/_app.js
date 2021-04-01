@@ -10,6 +10,7 @@ import { Col, Container, MinHeight, Row } from "../components/Layout";
 import { Sidebar } from "../components/Sidebar";
 import { ScrollToTop } from "../components/ScrollToTop";
 
+NProgress.configure({ parent: "#header-inner" });
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());

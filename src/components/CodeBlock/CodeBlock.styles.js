@@ -8,6 +8,7 @@ export const syntaxWrapperStyles = (theme) => css`
 
 		& code {
 			background: ${theme.colors.secondaryDark} !important;
+			font-family: monospace !important;
 		}
 	}
 `;

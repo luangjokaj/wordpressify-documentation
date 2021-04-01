@@ -4,7 +4,7 @@ export const syntaxWrapperStyles = (theme) => css`
 	& pre {
 		margin: 10px 0 !important;
 		background: ${theme.colors.secondaryDark} !important;
-		font-family: monospace;
+		font-family: monospace !important;
 
 		& code {
 			background: ${theme.colors.secondaryDark} !important;

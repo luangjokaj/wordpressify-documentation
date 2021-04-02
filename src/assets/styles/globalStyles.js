@@ -20,6 +20,7 @@ const globalStyles = (
 				-webkit-text-size-adjust: 100%;
 				-webkit-font-smoothing: antialiased;
 				font-family: ${theme.fonts.text};
+				font-display: swap;
 				font-size: ${theme.sizes.text.size.mobile};
 				line-height: ${theme.sizes.text.lineheight.mobile};
 				padding-top: ${theme.spacing.paddingTopBody.mobile};

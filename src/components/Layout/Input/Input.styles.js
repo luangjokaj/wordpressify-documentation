@@ -29,7 +29,7 @@ export const inputStyles = (
 
 	@media (hover: hover) {
 		&:hover:not([disabled]) {
-			border-color: ${theme.colors.primary};
+			border-color: ${theme.colors.secondary};
 		}
 	}
 
@@ -48,7 +48,7 @@ export const inputStyles = (
 		(type === "password") &&
 	css`
 		display: inline-block;
-		box-shadow: 0 0 0 0 ${theme.colors.primaryLight};
+		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
 
 		${fullWidth &&
 		css`
@@ -68,13 +68,13 @@ export const inputStyles = (
 	`};
 
 	&:focus:not([disabled]) {
-		border-color: ${theme.colors.primary};
-		box-shadow: 0 0 0 4px ${theme.colors.primaryLight};
+		border-color: ${theme.colors.secondary};
+		box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
 		outline: none;
 	}
 
 	&:active:not([disabled]) {
-		box-shadow: 0 0 0 2px ${theme.colors.primaryLight};
+		box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
 	}
 
 	${(type === "checkbox") | (type === "radio") &&
@@ -108,7 +108,7 @@ export const inputStyles = (
 	`}
 `;
 
-export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
+export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 	position: relative;
 	display: inline-block;
 	line-height: 1;
@@ -118,6 +118,24 @@ export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
 		display: block;
 		width: 100%;
 	`}
+
+	& input, {
+		vertical-align: top;
+	}
+
+	${size === "big"
+		? css`
+				& label {
+					max-width: calc(100% - 40px);
+					margin-top: 3px;
+				}
+		  `
+		: css`
+				& label {
+					max-width: calc(100% - 30px);
+					margin-top: -2px;
+				}
+		  `}
 
 	${type === "checkbox" &&
 	css`
@@ -163,7 +181,7 @@ export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
 			display: block;
 			position: absolute;
 			border-radius: 50%;
-			background: ${theme.colors.primary};
+			background: ${theme.colors.secondary};
 			transition: all 0.3s ease;
 			opacity: 0;
 			pointer-events: none;
@@ -226,7 +244,7 @@ export const selectWrapperStyles = (
 
 		& polyline,
 		& path {
-			stroke: ${theme.colors.primary};
+			stroke: ${theme.colors.secondary};
 		}
 	}
 
@@ -240,7 +258,7 @@ export const selectWrapperStyles = (
 
 		& polyline,
 		& path {
-			stroke: ${theme.colors.primary};
+			stroke: ${theme.colors.secondary};
 
 			${success &&
 			css`

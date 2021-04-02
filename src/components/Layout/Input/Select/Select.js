@@ -9,8 +9,8 @@ function Select({
 	size = "default",
 	error,
 	success,
-	label,
 	fullWidth = true,
+	label,
 	...props
 }) {
 	return (

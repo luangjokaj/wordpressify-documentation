@@ -29,7 +29,7 @@ export const inputStyles = (
 
 	@media (hover: hover) {
 		&:hover:not([disabled]) {
-			border-color: ${theme.colors.secondary};
+			border-color: ${theme.colors.primary};
 		}
 	}
 
@@ -48,7 +48,7 @@ export const inputStyles = (
 		(type === "password") &&
 	css`
 		display: inline-block;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
+		box-shadow: 0 0 0 0 ${theme.colors.primaryLight};
 
 		${fullWidth &&
 		css`
@@ -68,13 +68,13 @@ export const inputStyles = (
 	`};
 
 	&:focus:not([disabled]) {
-		border-color: ${theme.colors.secondary};
-		box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
+		border-color: ${theme.colors.primary};
+		box-shadow: 0 0 0 4px ${theme.colors.primaryLight};
 		outline: none;
 	}
 
 	&:active:not([disabled]) {
-		box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+		box-shadow: 0 0 0 2px ${theme.colors.primaryLight};
 	}
 
 	${(type === "checkbox") | (type === "radio") &&

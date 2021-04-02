@@ -9,7 +9,7 @@ function Select({
 	size = "default",
 	error,
 	success,
-	fullWidth = true,
+	fullWidth,
 	label,
 	...props
 }) {

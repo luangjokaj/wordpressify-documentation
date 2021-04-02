@@ -8,7 +8,7 @@ function Textarea({
 	error,
 	success,
 	label,
-	fullWidth = true,
+	fullWidth,
 	...props
 }) {
 	return (

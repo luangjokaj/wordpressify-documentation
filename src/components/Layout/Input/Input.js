@@ -11,7 +11,7 @@ function Input({
 	success,
 	error,
 	label,
-	fullWidth = true,
+	fullWidth,
 	...props
 }) {
 	if ((type === "checkbox") | (type === "radio")) {
@@ -50,7 +50,12 @@ function Input({
 	return (
 		<>
 			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
+				<Label
+					htmlFor={props.id}
+					error={error}
+					success={success}
+					fullWidth={fullWidth}
+				>
 					{label}
 				</Label>
 			)}

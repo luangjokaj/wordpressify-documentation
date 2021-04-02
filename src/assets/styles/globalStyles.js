@@ -63,11 +63,6 @@ const globalStyles = (
 				}
 			}
 
-			b,
-			strong {
-				font-weight: bolder;
-			}
-
 			pre,
 			code,
 			kbd,

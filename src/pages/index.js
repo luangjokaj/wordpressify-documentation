@@ -52,7 +52,15 @@ function Index({ posts = [] }) {
 								value="npx wordpressify"
 								fullWidth={false}
 								onChange={() => {}}
+								onClick={() => {
+									const textBox = document.getElementById(
+										"npm-package",
+									);
+									textBox.select();
+									document.execCommand("copy");
+								}}
 								spellCheck="false"
+								id="npm-package"
 							/>
 						</Flex>
 						<Space xs={10} lg="none" />

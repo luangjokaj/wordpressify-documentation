@@ -66,7 +66,7 @@ function Index({ posts = [] }) {
 			</p>
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H3 size="h2">Install WordPressify from Repository</H3>
 			<p>
 				To install WordPressify you need to clone the repository from
@@ -103,7 +103,7 @@ function Index({ posts = [] }) {
 			</p>
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H4 size="h5">Change template name</H4>
 			<Space size={10} />
 			<p>
@@ -125,7 +125,7 @@ function Index({ posts = [] }) {
 			</p>
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H4 size="h5">Bring down environment</H4>
 			<p>
 				To stop the WordPressify server and database for the project
@@ -138,7 +138,7 @@ function Index({ posts = [] }) {
 			<CodeBlock language="shell" value={`npm run env:rebuild`} />
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H4 size="h2">WordPress Plugins</H4>
 			<p>
 				If you want to add or build WordPress plugins, you can do that
@@ -147,7 +147,7 @@ function Index({ posts = [] }) {
 			<CodeBlock language="shell" value={`src/plugins`} />
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H4 size="h2">Production Template</H4>
 			<p>To generate your distribution files run the command:</p>
 			<CodeBlock language="shell" value={`npm run prod`} />

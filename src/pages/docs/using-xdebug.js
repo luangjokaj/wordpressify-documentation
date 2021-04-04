@@ -61,7 +61,7 @@ function Index({ posts = [] }) {
 			</p>
 			<Space size={1} />
 			<hr />
-			<Space size={1} />
+			<Space size={10} />
 			<H2>Xdebug on Linux</H2>
 			<p>
 				After setting up your IDE, select <strong>Debug</strong> in the

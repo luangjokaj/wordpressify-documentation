@@ -11,12 +11,12 @@ const makeHeadingStyles = (theme, size, h) => css`
 	&:before {
 		content: "";
 		display: block;
-		height: calc(${theme.spacing.paddingTopBody.mobile} + 19px);
-		margin: calc(-${theme.spacing.paddingTopBody.mobile} - 19px) 0 0;
+		height: calc(${theme.spacing.paddingTopBody.mobile} + 10px);
+		margin: calc(-${theme.spacing.paddingTopBody.mobile} - 10px) 0 0;
 		pointer-events: none;
 
 		${mq(Breakpoints.lg)} {
-			margin: calc(-${theme.spacing.paddingTopBody.desktop} - 19px) 0 0;
+			margin: calc(-${theme.spacing.paddingTopBody.desktop} - 10px) 0 0;
 		}
 	}
 

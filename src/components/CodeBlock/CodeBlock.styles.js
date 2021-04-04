@@ -18,7 +18,7 @@ export const boxDescriptionStyles = (theme) => css`
 	border-bottom-left-radius: 12px;
 	border-bottom-right-radius: 12px;
 	overflow: hidden;
-	margin-top: -16px;
+	margin-top: -20px;
 	padding: 30px 20px 20px 20px;
 
 	& p:only-of-type {

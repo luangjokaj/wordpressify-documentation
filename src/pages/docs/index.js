@@ -35,7 +35,7 @@ function Index({ posts = [] }) {
 			<Box noPadding isVideo>
 				<iframe
 					height="315"
-					src="https://www.youtube.com/embed/o4MQYidejN4"
+					src="https://www.youtube.com/embed/dDl0pMtTdSg"
 					frameBorder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					className="video"

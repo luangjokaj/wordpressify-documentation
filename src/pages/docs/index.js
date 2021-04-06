@@ -37,9 +37,11 @@ function Index({ posts = [] }) {
 					height="315"
 					src="https://www.youtube.com/embed/dDl0pMtTdSg"
 					frameBorder="0"
+					title="YouTube video player"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
 					className="video"
-				></iframe>
+				/>
 			</Box>
 			<Space size={20} />
 			<DocNavWrapper>

@@ -108,6 +108,16 @@ export const headerStyles = (theme, isLoaded) => css`
 			display: inline-flex;
 		}
 
+		& .version {
+			vertical-align: middle;
+			margin: auto 5px auto 0;
+			display: none;
+
+			${mq(Breakpoints.lg)} {
+				display: inline-flex;
+			}
+		}
+
 		& ul {
 			${resetListStyles};
 			margin: auto -10px auto 0;

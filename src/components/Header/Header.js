@@ -7,8 +7,20 @@ import { headerStyles } from "./Header.styles";
 
 function Header() {
 	const [isLoaded, setIsLoaded] = useState(false);
+	const [version, setVersion] = useState(null);
+
+	const fetchGitHubVersion = async () => {
+		await fetch(
+			"https://raw.githubusercontent.com/luangjokaj/wordpressify/master/package.json",
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setVersion(data.version);
+			});
+	};
 
 	useEffect(() => {
+		fetchGitHubVersion();
 		return setIsLoaded(true);
 	}, []);
 
@@ -31,6 +43,9 @@ function Header() {
 									<span className="mobile">Docs</span>
 								</a>
 							</Link>
+							{version && (
+								<small className="version">v{version}</small>
+							)}
 						</li>
 						<li>
 							<a

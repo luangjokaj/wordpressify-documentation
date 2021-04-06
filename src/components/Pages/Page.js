@@ -48,7 +48,6 @@ const Page = ({
 			<link rel="icon" type="image/png" sizes="32x32" href={favIcon32} />
 			<link rel="icon" type="image/png" sizes="16x16" href={favIcon16} />
 			<link rel="shortcut icon" href={favIcon} />
-
 			<title>{title + " - WordPressify"}</title>
 			<link
 				rel="preconnect"

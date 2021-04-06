@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
-import { Space, H1, H2, H3 } from "../../components/Layout";
+import { Space, H1, H2, H3, H4 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
 
@@ -36,8 +36,15 @@ function Index({ posts = [] }) {
 				In the production build SVGs and other image assets will go
 				through a <strong>minification</strong> process.
 			</p>
+			<H4 size="h1">Google Fonts</H4>
+			<p>
+				Google Fonts are included by default in the{" "}
+				<strong>header.php</strong>. In case you don't need them, don't
+				forget to take them out.
+			</p>
+			<CodeBlock language="shell" value={`src/header.php`} />
 			<Space size={10} />
-			<H3 size="h1">Fonts</H3>
+			<H4 size="h2">Custom Fonts</H4>
 			<p>Fonts are always special. Your fonts should be stored in:</p>
 			<CodeBlock language="shell" value={`src/assets/fonts/`} />
 			<p>Then you can include them in your CSS:</p>

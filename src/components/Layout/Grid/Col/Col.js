@@ -31,6 +31,7 @@ function Col({
 	lastXxxl,
 	display,
 	fullScreen,
+	sticky,
 }) {
 	return (
 		<div
@@ -63,6 +64,7 @@ function Col({
 					lastXxxl,
 					display,
 					fullScreen,
+					sticky,
 				)
 			}
 			className={className}

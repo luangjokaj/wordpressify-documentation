@@ -34,16 +34,11 @@ function App({ Component, pageProps }) {
 					<MinHeight>
 						{router.pathname.includes("/docs") ? (
 							<Container fluid>
-								<Row gutterLg="medium">
-									<Col xs={12} lg={3} fullScreen>
+								<Row gutterLg="medium" alignItems="flex-start">
+									<Col xs={12} lg={3} sticky>
 										<Sidebar />
 									</Col>
-									<Col
-										xs={12}
-										lg={9}
-										fullScreen
-										id="doc-content"
-									>
+									<Col xs={12} lg={9} id="doc-content">
 										<Component {...pageProps} />
 									</Col>
 								</Row>

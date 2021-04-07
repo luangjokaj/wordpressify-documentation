@@ -39,8 +39,9 @@ function Index({ posts = [] }) {
 			<H4 size="h1">Google Fonts</H4>
 			<p>
 				Google Fonts are included by default in the{" "}
-				<strong>header.php</strong>. In case you don't need them, don't
-				forget to take them out.
+				<strong>header.php</strong>. Fonts are loaded asynchronously to
+				prevent render-blocking and increase the page speed. In case you
+				don't need them, don't forget to take them out.
 			</p>
 			<CodeBlock language="shell" value={`src/header.php`} />
 			<Space size={10} />

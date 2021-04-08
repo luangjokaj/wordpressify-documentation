@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Container } from "cherry-components";
+import { useTheme } from "@emotion/react";
 import { Logo } from "../../assets/svg/Logo";
 import { GitHub } from "../../assets/svg/GitHub";
 import { headerStyles } from "./Header.styles";
-import { useTheme } from "@emotion/react";
 
 function Header() {
 	const theme = useTheme();

@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
 					<MinHeight theme={theme}>
 						{router.pathname.includes("/docs") ? (
 							<Container theme={theme} fluid>
-								<Row gutterLg="medium" alignItems="flex-start">
+								<Row alignItems="flex-start">
 									<Col xs={12} lg={3} sticky>
 										<Sidebar />
 									</Col>

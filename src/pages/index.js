@@ -15,7 +15,12 @@ function Index() {
 		<Page title="A build system designed to automate your WordPress development workflow">
 			<Container theme={theme}>
 				<Space xs={20} lg={150} />
-				<Row gutterLg="medium">
+				<Row
+					gutterLg="medium"
+					gutterXl="medium"
+					gutterXxl="medium"
+					gutterXxl="medium"
+				>
 					<Col xs={12} lg={8}>
 						<H1 size="hero2">
 							A build system designed to automate your WordPress

@@ -1,5 +1,5 @@
 import React from "react";
-import { css, useTheme } from "@emotion/react";
+import { useTheme } from "@emotion/react";
 import { Col, Container, Input, Row, Space } from "cherry-components";
 import Image from "next/image";
 import { Page } from "../components/Pages";

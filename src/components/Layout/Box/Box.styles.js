@@ -33,45 +33,49 @@ export const boxStyles = (theme, isLink, noPadding, isVideo) => css`
 			&:hover {
 				${shadowHoverStyles};
 
-				& [data-primary] {
+				& .primary {
 					color: ${theme.colors.primaryDark};
 				}
 
-				& [data-secondary] {
+				& .secondary {
 					color: ${theme.colors.secondaryDark};
 				}
 
-				& [data-tertiary] {
+				& .tertiary {
 					color: ${theme.colors.tertiaryDark};
 				}
 			}
 		}
 	`}
 
-	& [data-primary],
-	& [data-secondary],
-	& [data-tertiary] {
+	& .primary,
+	& .secondary,
+	& .tertiary {
 		display: block;
 		padding: 30px 20px 10px;
 		transition: all 0.3s ease;
 		font-size: ${theme.sizes.buttonBig.size.mobile};
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		hyphens: auto;
+		overflow: hidden;
 
 		${mq(Breakpoints.lg)} {
 			font-size: ${theme.sizes.buttonBig.size.desktop};
 		}
 	}
 
-	& [data-primary] {
+	& .primary {
 		display: block;
 		color: ${theme.colors.primary};
 	}
 
-	& [data-secondary] {
+	& .secondary {
 		display: block;
 		color: ${theme.colors.secondary};
 	}
 
-	& [data-tertiary] {
+	& .tertiary {
 		display: block;
 		color: ${theme.colors.tertiary};
 	}

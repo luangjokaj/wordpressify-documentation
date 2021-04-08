@@ -1,6 +1,7 @@
 import React from "react";
+import { Space } from "cherry-components";
 import { Page } from "../../components/Pages";
-import { Space, H1, H2, H3, Link } from "../../components/Layout";
+import { H1, H2, H3, Link } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 
 function Index() {

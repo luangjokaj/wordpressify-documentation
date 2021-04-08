@@ -1,7 +1,7 @@
 import React from "react";
+import { Space } from "cherry-components";
 import { mockupStyles } from "./Mockup.styles";
 import { MockupDots } from "../../assets/svg/MockupDots";
-import { Space } from "../Layout";
 
 function Mockup() {
 	return (

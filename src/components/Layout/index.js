@@ -1,4 +1,3 @@
-export { Space } from "cherry-components";
 export { Box } from "./Box";
 export { Button } from "./Button";
 export { Flex } from "./Flex";

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { Col, Container, Row, Space } from "cherry-components";
 import { useTheme } from "@emotion/react";
 import { H3 } from "../Layout";
@@ -12,7 +11,6 @@ import { Discord } from "../../assets/svg/Discord";
 import { socialStyles } from "./Socials.styles";
 
 function Socials() {
-	const router = useRouter();
 	const theme = useTheme();
 
 	return (

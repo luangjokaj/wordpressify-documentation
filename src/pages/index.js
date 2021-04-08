@@ -9,7 +9,7 @@ import { Socials } from "../components/Socials/Socials";
 import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
 
-function Index({ posts = [] }) {
+function Index() {
 	const theme = useTheme();
 	return (
 		<Page title="A build system designed to automate your WordPress development workflow">

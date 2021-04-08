@@ -6,7 +6,7 @@ import { featuresStyles } from "./Features.styles";
 function Features() {
 	return (
 		<Container css={(theme) => featuresStyles(theme)}>
-			<Row gutterLg="big">
+			<Row gutterLg="big" gutterXl="big" gutterXxl="big" gutterXxxl="big">
 				<Col xs={12} lg={12} textAlign="center">
 					<Space xs={40} lg={80} />
 					<H2 size="hero3">Features</H2>

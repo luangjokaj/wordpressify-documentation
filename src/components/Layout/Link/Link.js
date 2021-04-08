@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { buttonStyles } from "../Button/Button.styles";
+import { buttonStyles } from "./Button.styles";
 
 function CustomLink({
 	className,

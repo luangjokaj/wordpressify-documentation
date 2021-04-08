@@ -1,16 +1,19 @@
 import React from "react";
-import { containerStyles } from "./Container.styles";
+import { Container as CherryContainer } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function Container({ children, fluid, className, textAlign, id }) {
+	const theme = useTheme();
 	return (
-		<div
-			css={(theme) => containerStyles(theme, fluid, textAlign)}
+		<CherryContainer
+			fluid={fluid}
 			className={className}
-			data-container
+			textAlign={textAlign}
 			id={id}
+			theme={theme}
 		>
 			{children}
-		</div>
+		</CherryContainer>
 	);
 }
 

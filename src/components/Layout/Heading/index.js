@@ -1,11 +1,66 @@
 import React from "react";
-import { makeHeading } from "./makeHeading";
+import {
+	H1 as CherryH1,
+	H2 as CherryH2,
+	H3 as CherryH3,
+	H4 as CherryH4,
+	H5 as CherryH5,
+	H6 as CherryH6,
+} from "cherry-components";
+import { useTheme } from "@emotion/react";
 
-const H1 = makeHeading(1);
-const H2 = makeHeading(2);
-const H3 = makeHeading(3);
-const H4 = makeHeading(4);
-const H5 = makeHeading(5);
-const H6 = makeHeading(6);
+function H1({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH1 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH1>
+	);
+}
+
+function H2({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH2 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH2>
+	);
+}
+
+function H3({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH3 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH3>
+	);
+}
+
+function H4({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH4 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH4>
+	);
+}
+
+function H5({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH5 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH5>
+	);
+}
+
+function H6({ children, id, className, size }) {
+	const theme = useTheme();
+	return (
+		<CherryH6 id={id} className={className} size={size} theme={theme}>
+			{children}
+		</CherryH6>
+	);
+}
 
 export { H1, H2, H3, H4, H5, H6 };

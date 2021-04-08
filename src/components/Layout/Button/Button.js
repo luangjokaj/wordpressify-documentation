@@ -1,5 +1,6 @@
 import React from "react";
-import { buttonStyles } from "./Button.styles";
+import { Button as CherryButton } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function Button({
 	className,
@@ -10,23 +11,19 @@ function Button({
 	fullWidth,
 	...props
 }) {
+	const theme = useTheme();
 	return (
-		<button
+		<CherryButton
 			className={className}
-			css={(theme) =>
-				buttonStyles(
-					theme,
-					variant,
-					size,
-					frame,
-					props.disabled,
-					fullWidth,
-				)
-			}
+			variant={variant}
+			size={size}
+			frame={frame}
+			fullWidth={fullWidth}
+			theme={theme}
 			{...props}
 		>
 			{children}
-		</button>
+		</CherryButton>
 	);
 }
 

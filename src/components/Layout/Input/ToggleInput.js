@@ -1,11 +1,9 @@
 import React from "react";
-import { Label } from "../Label";
-import { radioCheckWrapperStyles } from "./Input.styles";
-import { toggleInputStyles } from "./ToggleInput.styles";
+import { ToggleInput as CherryToggleInput } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function ToggleInput({
 	className,
-	children,
 	size = "default",
 	success,
 	error,
@@ -14,25 +12,19 @@ function ToggleInput({
 	fullWidth,
 	...props
 }) {
+	const theme = useTheme();
 	return (
-		<div
-			css={(theme) =>
-				radioCheckWrapperStyles(theme, "toggle-input", size, fullWidth)
-			}
-		>
-			<div
-				css={(theme) => toggleInputStyles(theme, size)}
-				className="toggle-input-inner"
-			>
-				<input type="checkbox" className={className} {...props} />
-				<div className="toggle-input-slider" />
-			</div>
-			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
-					{label}
-				</Label>
-			)}
-		</div>
+		<CherryToggleInput
+			className={className}
+			size={size}
+			success={success}
+			error={error}
+			label={label}
+			type={type}
+			fullWidth={fullWidth}
+			theme={theme}
+			{...props}
+		/>
 	);
 }
 

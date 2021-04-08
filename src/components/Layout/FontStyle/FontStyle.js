@@ -1,16 +1,19 @@
 import React from "react";
-import { fontStyles } from "./FontStyle.styles";
+import { FontStyle as CherryFontStyle } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function FontStyle({ id, className, children, variant, ...props }) {
+	const theme = useTheme();
 	return (
-		<span
+		<CherryFontStyle
 			id={id}
 			className={className}
-			css={(theme) => fontStyles(theme, variant)}
+			variant={variant}
+			theme={theme}
 			{...props}
 		>
 			{children}
-		</span>
+		</CherryFontStyle>
 	);
 }
 

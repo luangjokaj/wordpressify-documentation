@@ -1,11 +1,13 @@
 import React from "react";
-import { minHeightStyles } from "./MinHeight.styles";
+import { MinHeight as CherryMinHeight } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function MinHeight({ className, children }) {
+	const theme = useTheme();
 	return (
-		<div className={className} css={(theme) => minHeightStyles(theme)}>
+		<CherryMinHeight className={className} theme={theme}>
 			{children}
-		</div>
+		</CherryMinHeight>
 	);
 }
 

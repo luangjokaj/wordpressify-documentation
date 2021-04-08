@@ -1,5 +1,5 @@
 import React from "react";
-import { labelStyles } from "./Label.styles";
+import { Label as CherryLabel } from "cherry-components";
 
 function Label({
 	className,
@@ -11,14 +11,16 @@ function Label({
 	...props
 }) {
 	return (
-		<label
+		<CherryLabel
 			className={className}
-			css={(theme) => labelStyles(theme, error, success, fullWidth)}
+			error={error}
+			success={success}
+			fullWidth={fullWidth}
 			htmlFor={htmlFor}
 			{...props}
 		>
 			{children}
-		</label>
+		</CherryLabel>
 	);
 }
 

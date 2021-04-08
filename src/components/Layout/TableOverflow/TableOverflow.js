@@ -1,11 +1,13 @@
 import React from "react";
-import { tableOverflowStyles } from "./TableOverflow.styles";
+import { TableOverflow as CherryTableOverflow } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function TableOverflow({ className, children }) {
+	const theme = useTheme();
 	return (
-		<div className={className} css={(theme) => tableOverflowStyles(theme)}>
+		<CherryTableOverflow className={className} theme={theme}>
 			{children}
-		</div>
+		</CherryTableOverflow>
 	);
 }
 

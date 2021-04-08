@@ -1,7 +1,6 @@
 import React from "react";
-import { Arrow } from "../../../../assets/svg/Arrow";
-import { Label } from "../../Label/Label";
-import { selectWrapperStyles, inputStyles } from "../Input.styles";
+import { Select as CherrySelect } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function Select({
 	className,
@@ -13,38 +12,20 @@ function Select({
 	label,
 	...props
 }) {
+	const theme = useTheme();
 	return (
-		<>
-			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
-					{label}
-				</Label>
-			)}
-			<div
-				css={(theme) =>
-					selectWrapperStyles(theme, size, success, error, fullWidth)
-				}
-			>
-				<select
-					className={className}
-					css={(theme) =>
-						inputStyles(
-							theme,
-							"text",
-							size,
-							props.disabled,
-							success,
-							error,
-							fullWidth,
-						)
-					}
-					{...props}
-				>
-					{children}
-				</select>
-				<Arrow />
-			</div>
-		</>
+		<CherrySelect
+			className={className}
+			size={size}
+			error={error}
+			success={success}
+			fullWidth={fullWidth}
+			label={label}
+			theme={theme}
+			{...props}
+		>
+			{children}
+		</CherrySelect>
 	);
 }
 

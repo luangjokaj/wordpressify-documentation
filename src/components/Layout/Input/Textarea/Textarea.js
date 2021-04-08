@@ -1,6 +1,6 @@
 import React from "react";
-import { Label } from "../../Label/Label";
-import { inputStyles } from "../Input.styles";
+import { Textarea as CherryTextarea } from "cherry-components";
+import { useTheme } from "@emotion/react";
 
 function Textarea({
 	className,
@@ -11,29 +11,18 @@ function Textarea({
 	fullWidth,
 	...props
 }) {
+	const theme = useTheme();
 	return (
-		<>
-			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
-					{label}
-				</Label>
-			)}
-			<textarea
-				className={className}
-				css={(theme) =>
-					inputStyles(
-						theme,
-						"text",
-						size,
-						props.disabled,
-						success,
-						error,
-						fullWidth,
-					)
-				}
-				{...props}
-			/>
-		</>
+		<CherryTextarea
+			className={className}
+			size={size}
+			error={error}
+			success={success}
+			label={label}
+			fullWidth={fullWidth}
+			theme={theme}
+			{...props}
+		/>
 	);
 }
 

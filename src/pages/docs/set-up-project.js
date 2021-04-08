@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1, H2, H3, H4 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
@@ -35,7 +34,7 @@ Theme Name
 const themeName = 'wordpressify';
 //--------------------------------------------------------------------------------------------------`;
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="Set Up Project">
 			<Space xs={20} lg={40} />

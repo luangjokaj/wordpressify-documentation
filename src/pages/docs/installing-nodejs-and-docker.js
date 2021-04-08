@@ -1,10 +1,9 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1, H2, H3, Link } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="Installing Node.js and Docker">
 			<Space xs={20} lg={40} />

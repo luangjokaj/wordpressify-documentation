@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1, H2, H3, H4 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
@@ -15,7 +14,7 @@ const fontCode = `@font-face {
     url('./fonts/Helvetica-Neue-Thin.svg#e3b7d1e7c160') format('svg');
 }`;
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="Images and Fonts">
 			<Space xs={20} lg={40} />
@@ -36,7 +35,7 @@ function Index({ posts = [] }) {
 				In the production build SVGs and other image assets will go
 				through a <strong>minification</strong> process.
 			</p>
-			<H4 size="h1">Google Fonts</H4>
+			<H3 size="h1">Google Fonts</H3>
 			<p>
 				Google Fonts are included by default in the{" "}
 				<strong>header.php</strong>. Fonts are loaded asynchronously to

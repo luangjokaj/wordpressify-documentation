@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1, H2, H3, H4 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
@@ -63,7 +62,7 @@ Version: 1.0
 Tags: responsive, clean, minimal, modern, documentation
 */`;
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="CSS, PostCSS and Sass">
 			<Space xs={20} lg={40} />

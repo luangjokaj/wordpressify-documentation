@@ -1,11 +1,10 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1, H2 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="Code Style Rules">
 			<Space xs={20} lg={40} />

@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { Space, H1 } from "../../components/Layout";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
@@ -13,7 +12,7 @@ const footerJS = [ './src/assets/js/**' ];
 
 /* -------------------------------------------------------------------------------------------------`;
 
-function Index({ posts = [] }) {
+function Index() {
 	return (
 		<Page title="External Libraries">
 			<Space xs={20} lg={40} />

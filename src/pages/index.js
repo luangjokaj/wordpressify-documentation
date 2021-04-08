@@ -20,6 +20,7 @@ function Index() {
 					gutterXl="medium"
 					gutterXxl="medium"
 					gutterXxl="medium"
+					gutterXxxl="medium"
 				>
 					<Col xs={12} lg={8}>
 						<H1 size="hero2">

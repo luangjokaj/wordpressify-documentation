@@ -1,32 +1,31 @@
 import React from "react";
-import { Select as CherrySelect } from "cherry-components";
+import { Textarea as CherryTextarea } from "cherry-components";
 import { useTheme } from "@emotion/react";
 
-function Select({
+function Textarea({
 	className,
-	children,
 	size = "default",
 	error,
 	success,
-	fullWidth,
 	label,
+	fullWidth,
+	variant = "primary",
 	...props
 }) {
 	const theme = useTheme();
 	return (
-		<CherrySelect
+		<CherryTextarea
 			className={className}
 			size={size}
 			error={error}
 			success={success}
-			fullWidth={fullWidth}
 			label={label}
+			fullWidth={fullWidth}
+			variant={variant}
 			theme={theme}
 			{...props}
-		>
-			{children}
-		</CherrySelect>
+		/>
 	);
 }
 
-export { Select };
+export { Textarea };

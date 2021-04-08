@@ -10,6 +10,7 @@ function ToggleInput({
 	label,
 	type = "checkbox",
 	fullWidth,
+	variant = "primary",
 	...props
 }) {
 	const theme = useTheme();
@@ -22,6 +23,7 @@ function ToggleInput({
 			label={label}
 			type={type}
 			fullWidth={fullWidth}
+			variant={variant}
 			theme={theme}
 			{...props}
 		/>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Space } from "../Layout";
+import { Col, Container, Row, Space } from "cherry-components";
 import { Logo } from "../../assets/svg/Logo";
 import { Riangle } from "../../assets/svg/Riangle";
 import { Star } from "../../assets/svg/Star";

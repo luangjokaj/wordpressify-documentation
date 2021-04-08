@@ -1,1 +1,0 @@
-export { MinHeight } from "./MinHeight";

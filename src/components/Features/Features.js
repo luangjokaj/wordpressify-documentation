@@ -1,11 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { Container, Col, H2, Row, Space } from "../Layout";
+import { Col, Container, Row, Space } from "cherry-components";
+import { useTheme } from "@emotion/react";
+import { H2 } from "../Layout";
 import { featuresStyles } from "./Features.styles";
 
 function Features() {
+	const theme = useTheme();
 	return (
-		<Container css={(theme) => featuresStyles(theme)}>
+		<Container theme={theme} css={(theme) => featuresStyles(theme)}>
 			<Row gutterLg="big" gutterXl="big" gutterXxl="big" gutterXxxl="big">
 				<Col xs={12} lg={12} textAlign="center">
 					<Space xs={40} lg={80} />

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { Container } from "cherry-components";
 import { Logo } from "../../assets/svg/Logo";
 import { GitHub } from "../../assets/svg/GitHub";
-import { Container } from "../Layout";
 import { headerStyles } from "./Header.styles";
+import { useTheme } from "@emotion/react";
 
 function Header() {
+	const theme = useTheme();
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [version, setVersion] = useState(null);
 
@@ -26,7 +28,7 @@ function Header() {
 
 	return (
 		<header css={(theme) => headerStyles(theme, isLoaded)}>
-			<Container className="container">
+			<Container theme={theme} className="container">
 				<div className="inner-wrapper" id="header-inner">
 					<Link href="/" as="/">
 						<a className="logo">

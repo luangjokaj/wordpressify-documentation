@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { Container, H3, Space } from "../Layout";
+import { Container, Space } from "cherry-components";
+import { useTheme } from "@emotion/react";
+import { H3 } from "../Layout";
 import { projectStyles } from "./Projects.styles";
 
 function Projects() {
+	const theme = useTheme();
 	return (
 		<>
-			<Container textAlign="center">
+			<Container theme={theme} textAlign="center">
 				<hr className="no-margin" />
 				<Space xs={20} lg={80} />
 				<H3 size="hero3">Open Source Projects</H3>

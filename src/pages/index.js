@@ -1,21 +1,9 @@
 import React from "react";
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
+import { Col, Container, Input, Row, Space } from "cherry-components";
 import Image from "next/image";
 import { Page } from "../components/Pages";
-import {
-	Container,
-	Row,
-	Col,
-	Space,
-	Button,
-	H1,
-	H2,
-	H3,
-	H4,
-	Link,
-	Input,
-	Flex,
-} from "../components/Layout";
+import { Button, H1, H2, H3, H4, Link, Flex } from "../components/Layout";
 import { LogoWrapper } from "../components/LogoWrapper/LogoWrapper";
 import { BigNumber } from "../components/BigNumber";
 import { Projects } from "../components/Projects";
@@ -24,9 +12,10 @@ import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
 
 function Index({ posts = [] }) {
+	const theme = useTheme();
 	return (
 		<Page title="A build system designed to automate your WordPress development workflow">
-			<Container>
+			<Container theme={theme}>
 				<Space xs={20} lg={150} />
 				<Row gutterLg="medium">
 					<Col xs={12} lg={8}>
@@ -49,6 +38,8 @@ function Index({ posts = [] }) {
 							</Link>
 							<Space size={20} horizontal />
 							<Input
+								variant="primary"
+								theme={theme}
 								value="npx wordpressify"
 								fullWidth={false}
 								onChange={() => {}}
@@ -82,7 +73,7 @@ function Index({ posts = [] }) {
 			<Features />
 			<Projects />
 			<Space xs={20} lg={80} />
-			<Container>
+			<Container theme={theme}>
 				<Row>
 					<Col xs={12} textAlign="center">
 						<Link href="/docs" as="/docs" size="big">

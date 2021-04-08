@@ -1,12 +1,11 @@
-import { useEffect } from "react";
 import { useRouter, Router } from "next/router";
 import NProgress from "nprogress";
-import { ThemeProvider, css } from "@emotion/react";
+import { ThemeProvider } from "@emotion/react";
+import { Col, Container, MinHeight, Row } from "cherry-components";
 import { globalStyles } from "../assets/styles/globalStyles";
 import { theme } from "../assets/styles/theme";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
-import { Col, Container, MinHeight, Row } from "../components/Layout";
 import { Sidebar } from "../components/Sidebar";
 import { ScrollToTop } from "../components/ScrollToTop";
 
@@ -17,23 +16,15 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function App({ Component, pageProps }) {
 	const router = useRouter();
-
-	useEffect(() => {
-		if (document.getElementById("doc-content")) {
-			document.getElementById("doc-content").scroll(0, 0);
-			window.scrollTo(0, 0);
-		}
-	}, [router]);
-
 	return (
 		<>
 			{globalStyles}
 			<ThemeProvider theme={theme}>
 				<ScrollToTop>
 					<Header />
-					<MinHeight>
+					<MinHeight theme={theme}>
 						{router.pathname.includes("/docs") ? (
-							<Container fluid>
+							<Container theme={theme} fluid>
 								<Row gutterLg="medium" alignItems="flex-start">
 									<Col xs={12} lg={3} sticky>
 										<Sidebar />

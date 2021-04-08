@@ -4,8 +4,6 @@ import { Col, Container, Input, Row, Space } from "cherry-components";
 import Image from "next/image";
 import { Page } from "../components/Pages";
 import { Button, H1, H2, H3, H4, Link, Flex } from "../components/Layout";
-import { LogoWrapper } from "../components/LogoWrapper/LogoWrapper";
-import { BigNumber } from "../components/BigNumber";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials/Socials";
 import { Features } from "../components/Features";

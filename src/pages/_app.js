@@ -26,7 +26,7 @@ function App({ Component, pageProps }) {
 						{router.pathname.includes("/docs") ? (
 							<Container theme={theme} fluid>
 								<Row alignItems="flex-start">
-									<Col xs={12} lg={3} sticky>
+									<Col xs={12} lg={3} sticky theme={theme}>
 										<Sidebar />
 									</Col>
 									<Col xs={12} lg={9} id="doc-content">

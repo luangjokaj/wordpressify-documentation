@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { Burger } from "../Layout/Burger";
+import { Burger } from "../Layout";
 import { DropDown } from "../../assets/svg/DropDown";
 import { navigationData } from "./navigation-data";
 import { sidebarStyles } from "./Sidebar.styles";

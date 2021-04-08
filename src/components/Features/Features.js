@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Col, Container, Row, Space } from "cherry-components";
+import { Col, Container, Row, Space, H2 } from "cherry-components";
 import { useTheme } from "@emotion/react";
-import { H2 } from "../Layout";
 import { featuresStyles } from "./Features.styles";
 
 function Features() {

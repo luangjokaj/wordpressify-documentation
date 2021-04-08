@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Col, Container, Row, Space } from "cherry-components";
+import { Col, Container, Row, Space, H3 } from "cherry-components";
 import { useTheme } from "@emotion/react";
-import { H3 } from "../Layout";
 import { Twitter } from "../../assets/svg/Twitter";
 import { GitHub } from "../../assets/svg/GitHub";
 import { Dribbble } from "../../assets/svg/Dribbble";

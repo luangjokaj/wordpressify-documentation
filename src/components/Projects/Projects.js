@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Container, Space } from "cherry-components";
+import { Container, Space, H3 } from "cherry-components";
 import { useTheme } from "@emotion/react";
-import { H3 } from "../Layout";
 import { projectStyles } from "./Projects.styles";
 
 function Projects() {

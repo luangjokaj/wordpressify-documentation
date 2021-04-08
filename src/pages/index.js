@@ -1,9 +1,9 @@
 import React from "react";
 import { useTheme } from "@emotion/react";
-import { Col, Container, Input, Row, Space } from "cherry-components";
+import { Col, Container, Input, Row, Space, H1 } from "cherry-components";
 import Image from "next/image";
 import { Page } from "../components/Pages";
-import { Button, H1, H2, H3, H4, Link, Flex } from "../components/Layout";
+import { Link, Flex } from "../components/Layout";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials/Socials";
 import { Features } from "../components/Features";

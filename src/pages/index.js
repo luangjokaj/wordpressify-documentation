@@ -72,7 +72,7 @@ function Index() {
 			<Projects />
 			<Space xs={20} lg={80} />
 			<Container theme={theme}>
-				<Row>
+				<Row gutterLg="default">
 					<Col xs={12} textAlign="center">
 						<Link href="/docs" as="/docs" size="big">
 							Get Started

@@ -32,7 +32,7 @@ function Footer({ className }) {
 			<footer className={className} css={(theme) => footerStyles(theme)}>
 				<Container>
 					<Space xs={40} lg={80} />
-					<Row className="first-row">
+					<Row gutterLg="default" className="first-row">
 						<Col xs={12} lg={6}>
 							<a
 								href="https://github.com/cherry-design-system/?ref=wordpressify.co"
@@ -100,7 +100,7 @@ function Footer({ className }) {
 					</Row>
 					<Space xs={40} lg={80} />
 					<hr />
-					<Row>
+					<Row gutterLg="default">
 						<Col xs={12} lg={6} className="left-col">
 							<Space xs={40} lg={100} />
 							<a

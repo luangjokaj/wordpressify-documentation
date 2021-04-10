@@ -32,12 +32,7 @@ export const footerStyles = (theme) => css`
 		& a {
 			color: ${theme.colors.primary};
 			font-weight: 600;
-			margin: 0;
-			display: inline-block;
-
-			${mq(Breakpoints.lg)} {
-				margin: 10px 0;
-			}
+			margin: 10px 0;
 
 			& svg {
 				vertical-align: middle;
@@ -117,10 +112,10 @@ export const footerStyles = (theme) => css`
 			& li {
 				& a {
 					display: inline-block;
-					margin: 5px;
+					margin: 5px 10px;
 
 					${mq(Breakpoints.lg)} {
-						margin: 10px;
+						margin: 0 10px;
 					}
 				}
 			}

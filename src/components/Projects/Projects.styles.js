@@ -11,6 +11,7 @@ export const projectStyles = (theme) => css`
 		min-height: 350px;
 		display: flex;
 		width: 100%;
+		padding: 20px;
 
 		${mq(Breakpoints.lg)} {
 			width: 50%;

@@ -44,7 +44,7 @@
 		"@next/bundle-analyzer": "^10.1.3",
 		"babel-eslint": "^10.1.0",
 		"cherry-components": "^0.0.2-8",
-		"eslint": "^7.23.0",
+		"eslint": "^7.24.0",
 		"eslint-plugin-prettier": "^3.3.1",
 		"eslint-plugin-react": "^7.23.2",
 		"eslint-plugin-react-hooks": "^4.2.0",

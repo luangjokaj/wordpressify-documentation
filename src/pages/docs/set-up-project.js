@@ -1,5 +1,6 @@
 import React from "react";
 import { Space, H1, H2, H3, H4 } from "cherry-components";
+import { useTheme } from "@emotion/react";
 import { Page } from "../../components/Pages";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
@@ -35,6 +36,7 @@ const themeName = 'wordpressify';
 //--------------------------------------------------------------------------------------------------`;
 
 function Index() {
+	const theme = useTheme();
 	return (
 		<Page title="Set Up Project">
 			<Space xs={20} lg={40} />
@@ -112,7 +114,7 @@ function Index() {
 			</p>
 			<CodeBlock language="js" value={themeNameCode} />
 			<Space size={10} />
-			<H4 id="start-workflow" size="h2">
+			<H4 id="start-workflow" size="h2" theme={theme}>
 				Start workflow
 			</H4>
 			<p>To start the development server run the command:</p>

@@ -18,6 +18,7 @@ function Index() {
 			<Link
 				href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"
 				external
+				frame
 			>
 				WSL Installation Guide
 			</Link>

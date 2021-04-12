@@ -79,6 +79,10 @@ export const navigationData = [
 				href: "/docs/troubleshooting",
 				label: "Troubleshooting",
 			},
+			{
+				href: "/docs/windows-installation",
+				label: "Windows Installation",
+			},
 		],
 	},
 ];

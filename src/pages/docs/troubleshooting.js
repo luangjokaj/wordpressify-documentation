@@ -37,8 +37,12 @@ function Index() {
 				<DocNav href="/docs/deployment" as="/docs/deployment" prev>
 					Deployment
 				</DocNav>
-				<DocNav href="/docs" as="/docs" next>
-					Introduction
+				<DocNav
+					href="/docs/windows-installation"
+					as="/docs/windows-installation"
+					next
+				>
+					Windows Installation
 				</DocNav>
 			</DocNavWrapper>
 		</Page>

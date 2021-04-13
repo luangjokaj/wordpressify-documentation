@@ -45,7 +45,7 @@ export const headerStyles = (theme, isLoaded) => css`
 			height: 5px;
 			width: 100%;
 			bottom: -6px;
-			transition: all 0.3s ease;
+			transition: transform 0.3s ease;
 			pointer-events: none;
 		}
 
@@ -73,6 +73,7 @@ export const headerStyles = (theme, isLoaded) => css`
 				scaleY(1);
 			opacity: 1;
 			transition-delay: 1.3s;
+			background: ${theme.colors.light};
 
 			${isLoaded &&
 			css`

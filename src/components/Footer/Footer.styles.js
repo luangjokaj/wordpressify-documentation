@@ -35,9 +35,30 @@ export const footerStyles = (theme) => css`
 		}
 	}
 
+	& a {
+		${theme.isDark
+			? css`
+					color: ${theme.colors.dark};
+			  `
+			: css`
+					color: ${theme.colors.primary};
+			  `}
+
+		@media (hover: hover) {
+			&:hover {
+				${theme.isDark
+					? css`
+							color: ${theme.colors.primaryLight};
+					  `
+					: css`
+							color: ${theme.colors.primaryDark};
+					  `}
+			}
+		}
+	}
+
 	& .first-row {
 		& a {
-			color: ${theme.colors.primary};
 			font-weight: 600;
 			margin: 10px 0;
 
@@ -51,12 +72,6 @@ export const footerStyles = (theme) => css`
 				}
 			}
 
-			@media (hover: hover) {
-				&:hover {
-					color: ${theme.colors.primaryDark};
-				}
-			}
-
 			&.github-stars {
 				& span,
 				& small {
@@ -64,38 +79,60 @@ export const footerStyles = (theme) => css`
 				}
 
 				& small {
-					font-size: ${theme.sizes.small.mobile};
 					display: inline-block;
 					margin: 0 0 0 2px;
 					padding: 0 0 0 7px;
 					line-height: 1;
 					border-left: solid 1px ${theme.colors.gray};
 					transform: translateY(1px);
-					opacity: 0.5;
 					transition: all 0.3s ease;
+					color: ${theme.colors.primary};
+					opacity: 0.5;
 
 					${mq(Breakpoints.lg)} {
-						font-size: ${theme.sizes.small.mobile};
 						line-height: 1;
 					}
 				}
 
 				& .star {
 					margin: 0 0 0 2px;
+
 					& path {
 						fill: none;
+						${theme.isDark
+							? css`
+									stroke: ${theme.colors.primaryLight};
+							  `
+							: css`
+									stroke: ${theme.colors.primary};
+							  `}
 					}
 				}
 
 				@media (hover: hover) {
 					&:hover {
 						& small {
-							opacity: 0.8;
+							opacity: 8;
+
+							${theme.isDark
+								? css`
+										color: ${theme.colors.primaryLight};
+								  `
+								: css`
+										color: ${theme.colors.primaryDark};
+								  `}
 						}
 
 						& .star {
 							& path {
-								stroke: ${theme.colors.primaryDark};
+								${theme.isDark
+									? css`
+											stroke: ${theme.colors
+												.primaryLight};
+									  `
+									: css`
+											stroke: ${theme.colors.primaryDark};
+									  `}
 							}
 						}
 					}

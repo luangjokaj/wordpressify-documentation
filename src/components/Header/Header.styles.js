@@ -45,7 +45,7 @@ export const headerStyles = (theme, isLoaded) => css`
 			height: 5px;
 			width: 100%;
 			bottom: -6px;
-			transition: transform 0.3s ease;
+			transition: opacity 0.3s ease, transform 0.3s ease;
 			pointer-events: none;
 		}
 

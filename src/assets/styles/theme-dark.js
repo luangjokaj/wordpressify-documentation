@@ -24,7 +24,7 @@ const themeDark = {
 		dark: "#fff",
 		light: "#001116",
 
-		grayLight: "rgba(255,255,255,0.2)",
+		grayLight: "rgba(255,255,255,0.1)",
 		gray: "rgba(255,255,255,0.5)",
 		grayDark: "rgba(255,255,255,0.8)",
 

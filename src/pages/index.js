@@ -8,6 +8,7 @@ import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials/Socials";
 import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
+import { theme as themeLight } from "../assets/styles/theme";
 
 function Index() {
 	const theme = useTheme();
@@ -37,7 +38,7 @@ function Index() {
 							<Space size={20} horizontal />
 							<Input
 								variant="primary"
-								theme={theme}
+								theme={themeLight}
 								value="npx wordpressify"
 								fullWidth={false}
 								onChange={() => {}}

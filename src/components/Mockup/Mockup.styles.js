@@ -35,7 +35,6 @@ export const mockupStyles = (theme) => css`
 		& .content {
 			display: block;
 			background: ${theme.colors.secondaryDark};
-			color: ${rgba(theme.colors.light, 0.5)};
 			padding: 20px;
 			box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.15),
 				0px 10px 30px rgba(0, 0, 0, 0.3);
@@ -47,12 +46,32 @@ export const mockupStyles = (theme) => css`
 				padding: 40px;
 			}
 
+			${theme.isDark
+				? css`
+						color: ${rgba(theme.colors.dark, 0.5)};
+				  `
+				: css`
+						color: ${rgba(theme.colors.light, 0.5)};
+				  `}
+
 			& .light {
-				color: ${theme.colors.light};
+				${theme.isDark
+					? css`
+							color: ${theme.colors.dark};
+					  `
+					: css`
+							color: ${theme.colors.light};
+					  `}
 			}
 
 			& .soft {
-				color: ${rgba(theme.colors.light, 0.8)};
+				${theme.isDark
+					? css`
+							color: ${rgba(theme.colors.dark, 0.5)};
+					  `
+					: css`
+							color: ${rgba(theme.colors.light, 0.8)};
+					  `}
 			}
 
 			& .highlight {

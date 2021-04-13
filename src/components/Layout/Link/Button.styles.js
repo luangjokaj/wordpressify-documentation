@@ -40,14 +40,28 @@ export const buttonStyles = (
 	css`
 		background: ${theme.colors.primary};
 		border: solid 2px ${theme.colors.primary};
-		color: ${theme.colors.light};
 		box-shadow: 0 0 0 0 ${theme.colors.primaryLight};
+
+		${theme.isDark
+			? css`
+					color: ${theme.colors.dark};
+			  `
+			: css`
+					color: ${theme.colors.light};
+			  `}
 
 		@media (hover: hover) {
 			&:hover:not([disabled]) {
-				color: ${theme.colors.light};
 				background: ${theme.colors.primaryDark};
 				border-color: ${theme.colors.primaryDark};
+
+				${theme.isDark
+					? css`
+							color: ${theme.colors.dark};
+					  `
+					: css`
+							color: ${theme.colors.light};
+					  `}
 			}
 		}
 

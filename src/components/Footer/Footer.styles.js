@@ -4,8 +4,15 @@ import { resetListStyles } from "../../assets/styles/helperStyles";
 import { Breakpoints, mq } from "../../assets/styles/mq";
 
 export const footerStyles = (theme) => css`
-	background: ${rgba(theme.colors.grayLight, 0.3)};
 	text-align: center;
+
+	${theme.isDark
+		? css`
+				background: ${rgba(theme.colors.dark, 0.05)};
+		  `
+		: css`
+				background: ${rgba(theme.colors.grayLight, 0.3)};
+		  `}
 
 	${mq(Breakpoints.lg)} {
 		text-align: left;

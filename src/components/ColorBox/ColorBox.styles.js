@@ -5,7 +5,7 @@ import { Breakpoints, mq } from "../../assets/styles/mq";
 export const colorBoxStyles = (theme, value, border) => css`
 	display: flex;
 	justify-content: space-between;
-	${shadowStyles};
+	${shadowStyles(theme)};
 	border-radius: 30px;
 	padding: 15px;
 

@@ -20,7 +20,7 @@ export const burgerStyles = (theme, isOpen) => css`
 	right: 15px;
 	border-radius: 50%;
 	background: ${theme.colors.light};
-	${shadowStyles};
+	${shadowStyles(theme)};
 
 	${mq(Breakpoints.lg)} {
 		display: none;

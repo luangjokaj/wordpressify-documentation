@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { darken, lighten } from "polished";
+import { darken, lighten, rgba } from "polished";
 import { Breakpoints, mq } from "../../assets/styles/mq";
 
 export const projectStyles = (theme) => css`
@@ -28,7 +28,13 @@ export const projectStyles = (theme) => css`
 		}
 
 		& p {
-			color: ${theme.colors.light};
+			${theme.isDark
+				? css`
+						color: ${rgba(theme.colors.dark, 0.5)};
+				  `
+				: css`
+						color: ${theme.colors.light};
+				  `}
 		}
 
 		@media (hover: hover) {

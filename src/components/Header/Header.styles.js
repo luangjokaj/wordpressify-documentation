@@ -10,7 +10,7 @@ export const headerStyles = (theme, isLoaded) => css`
 	width: 100%;
 	z-index: 9999;
 	display: flex;
-	transition: all 1s ease;
+	transition: height 1s ease;
 	height: 100vh;
 	transition-delay: 1s;
 
@@ -68,7 +68,6 @@ export const headerStyles = (theme, isLoaded) => css`
 			width: 100%;
 			left: 0;
 			bottom: -6px;
-			background: ${theme.colors.light};
 			position: absolute;
 			transform: translate3d(0, 0, 0) scaleX(1) translateY(-100%)
 				scaleY(1);
@@ -142,6 +141,10 @@ export const headerStyles = (theme, isLoaded) => css`
 
 				&:nth-of-type(2) {
 					transition-delay: 1.1s;
+				}
+
+				&:nth-of-type(3) {
+					transition-delay: 1.3s;
 				}
 
 				& a {

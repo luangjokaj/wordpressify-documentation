@@ -1,6 +1,8 @@
 import React from "react";
+import { useTheme } from "@emotion/react";
 
 function ArrowTail() {
+	const theme = useTheme();
 	return (
 		<svg
 			width="16"
@@ -14,6 +16,7 @@ function ArrowTail() {
 				stroke="black"
 				strokeLinecap="round"
 				strokeLinejoin="round"
+				stroke={theme.isDark ? "#fff" : "#000"}
 			/>
 		</svg>
 	);

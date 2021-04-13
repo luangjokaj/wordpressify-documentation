@@ -8,7 +8,7 @@ import { Breakpoints, mq } from "../../../assets/styles/mq";
 export const boxStyles = (theme, isLink, noPadding, isVideo) => css`
 	line-height: 0;
 	border-radius: 12px;
-	${shadowStyles};
+	${shadowStyles(theme)};
 	overflow: hidden;
 
 	${noPadding
@@ -31,7 +31,7 @@ export const boxStyles = (theme, isLink, noPadding, isVideo) => css`
 
 		@media (hover: hover) {
 			&:hover {
-				${shadowHoverStyles};
+				${shadowHoverStyles(theme)};
 
 				& .primary {
 					color: ${theme.colors.primaryDark};

@@ -94,7 +94,7 @@ export const headerStyles = (theme, isLoaded) => css`
 
 			${isLoaded &&
 			css`
-				max-width: calc(100% - 90px);
+				max-width: calc(100% - 120px);
 				width: 272px;
 			`}
 

@@ -22,7 +22,7 @@ const themeDark = {
 		tertiaryDark: "#6B21A8",
 
 		dark: "#fff",
-		light: "#111827",
+		light: "#001116",
 
 		grayLight: "rgba(255,255,255,0.2)",
 		gray: "rgba(255,255,255,0.5)",

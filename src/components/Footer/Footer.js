@@ -126,7 +126,9 @@ function Footer({ className }) {
 						</Col>
 						<Col xs={12} lg={6} className="right-col">
 							<Space xs={30} lg={80} />
-							<Logo />
+							<a href="#">
+								<Logo />
+							</a>
 							<p>© Copyright 2021 - All rights reserved. </p>
 							<Space xs={30} lg={70} />
 						</Col>

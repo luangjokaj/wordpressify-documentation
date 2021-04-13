@@ -1,10 +1,10 @@
 import { Global, css } from "@emotion/react";
+import { rgba } from "polished";
 import { Breakpoints, mq } from "./mq";
-import { theme } from "./theme";
 
 const globalStyles = (
 	<Global
-		styles={css`
+		styles={(theme) => css`
 			html,
 			body {
 				margin: 0;
@@ -24,6 +24,7 @@ const globalStyles = (
 				font-size: ${theme.sizes.text.size.mobile};
 				line-height: ${theme.sizes.text.lineheight.mobile};
 				padding-top: ${theme.spacing.paddingTopBody.mobile};
+				background: ${theme.colors.light};
 				color: ${theme.colors.dark};
 				margin: 0;
 
@@ -138,7 +139,13 @@ const globalStyles = (
 			p,
 			ol,
 			ul {
-				color: ${theme.colors.gray};
+				${theme.isDark
+					? css`
+							color: ${rgba(theme.colors.dark, 0.5)};
+					  `
+					: css`
+							color: ${theme.colors.gray};
+					  `}
 			}
 
 			p {

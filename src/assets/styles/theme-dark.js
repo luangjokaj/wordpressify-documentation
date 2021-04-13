@@ -1,5 +1,5 @@
-const theme = {
-	isDark: false,
+const themeDark = {
+	isDark: true,
 	spacing: {
 		maxWidth: "1280px",
 		maxWidthLimit: "1280px",
@@ -21,12 +21,12 @@ const theme = {
 		tertiary: "#A855F7",
 		tertiaryDark: "#6B21A8",
 
-		dark: "#000",
-		light: "#fff",
+		dark: "#fff",
+		light: "#111827",
 
-		grayLight: "#E5E7EB",
-		gray: "#9CA3AF",
-		grayDark: "#4B5563",
+		grayLight: "rgba(255,255,255,0.2)",
+		gray: "rgba(255,255,255,0.5)",
+		grayDark: "rgba(255,255,255,0.8)",
 
 		success: "#28A745",
 		error: "#DC3545",
@@ -243,4 +243,4 @@ const theme = {
 	},
 };
 
-export { theme };
+export { themeDark };

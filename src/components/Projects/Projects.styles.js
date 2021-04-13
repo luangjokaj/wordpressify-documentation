@@ -28,7 +28,13 @@ export const projectStyles = (theme) => css`
 		}
 
 		& p {
-			color: ${theme.colors.light};
+			${theme.isDark
+				? css`
+						color: ${theme.colors.dark};
+				  `
+				: css`
+						color: ${theme.colors.light};
+				  `}
 		}
 
 		@media (hover: hover) {

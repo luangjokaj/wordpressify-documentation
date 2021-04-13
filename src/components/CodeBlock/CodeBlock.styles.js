@@ -14,7 +14,7 @@ export const syntaxWrapperStyles = (theme) => css`
 `;
 
 export const boxDescriptionStyles = (theme) => css`
-	border: solid 1px ${theme.colors.gray};
+	border: solid 1px ${theme.colors.grayLight};
 	border-bottom-left-radius: 12px;
 	border-bottom-right-radius: 12px;
 	overflow: hidden;

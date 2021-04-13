@@ -36,7 +36,7 @@ export const sidebarStyles = (theme, isMenuOpen) => css`
 		top: initial;
 		height: initial;
 		overflow-y: hidden;
-		background: ${theme.colors.light};
+		background: transparent;
 		transform: translate3d(0, 0, 0) translateX(0);
 		opacity: 1;
 		pointer-events: all;
@@ -84,10 +84,20 @@ export const sidebarStyles = (theme, isMenuOpen) => css`
 				width: 100%;
 
 				&.active {
-					background: ${rgba(theme.colors.grayLight, 0.5)};
 					border-radius: 6px;
 					font-weight: 500;
 					color: ${theme.colors.dark};
+
+					${theme.isDark
+						? css`
+								background: ${rgba(theme.colors.dark, 0.1)};
+						  `
+						: css`
+								background: ${rgba(
+									theme.colors.grayLight,
+									0.5,
+								)};
+						  `}
 
 					@media (hover: hover) {
 						&:hover {

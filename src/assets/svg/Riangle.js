@@ -1,6 +1,8 @@
 import React from "react";
+import { useTheme } from "@emotion/react";
 
 function Riangle() {
+	const theme = useTheme();
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +13,7 @@ function Riangle() {
 			<polygon
 				fillRule="evenodd"
 				points="4.536 7.832 0 15.66 18.152 15.66 9.076 0 4.536 7.832 13.609 7.832 9.073 15.66"
+				fill={theme.isDark ? "#fff" : "#000"}
 			></polygon>
 		</svg>
 	);

@@ -6,7 +6,7 @@ import { Logo } from "../../assets/svg/Logo";
 import { GitHub } from "../../assets/svg/GitHub";
 import { headerStyles } from "./Header.styles";
 
-function Header() {
+function Header({ themeSwitcher }) {
 	const theme = useTheme();
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [version, setVersion] = useState(null);
@@ -59,6 +59,7 @@ function Header() {
 								<GitHub />
 							</a>
 						</li>
+						{themeSwitcher && <li>{themeSwitcher}</li>}
 					</ul>
 				</div>
 			</Container>

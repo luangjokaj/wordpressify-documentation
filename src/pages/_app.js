@@ -25,11 +25,7 @@ function App({ Component, pageProps }) {
 
 	useEffect(() => {
 		setIsLoaded(true);
-		if (
-			localStorage.theme === "dark" ||
-			(!("theme" in localStorage) &&
-				window.matchMedia("(prefers-color-scheme: dark)").matches)
-		) {
+		if (localStorage.theme === "dark") {
 			document.documentElement.classList.add("dark");
 			setCurrentTheme(themeDark);
 		} else {

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { darken, lighten, rgba } from "polished";
+import { darken, lighten } from "polished";
 import { Breakpoints, mq } from "../../assets/styles/mq";
 
 export const projectStyles = (theme) => css`
@@ -30,7 +30,7 @@ export const projectStyles = (theme) => css`
 		& p {
 			${theme.isDark
 				? css`
-						color: ${rgba(theme.colors.dark, 0.5)};
+					color: ${theme.colors.dark};
 				  `
 				: css`
 						color: ${theme.colors.light};

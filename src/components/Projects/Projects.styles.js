@@ -30,7 +30,7 @@ export const projectStyles = (theme) => css`
 		& p {
 			${theme.isDark
 				? css`
-					color: ${theme.colors.dark};
+						color: ${theme.colors.dark};
 				  `
 				: css`
 						color: ${theme.colors.light};

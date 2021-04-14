@@ -11,7 +11,6 @@ import { socialStyles } from "./Socials.styles";
 
 function Socials() {
 	const theme = useTheme();
-
 	return (
 		<>
 			<hr className="no-margin" />

@@ -20,6 +20,9 @@ function ThemeSwitcher({ setTheme }) {
 					localStorage.theme = "dark";
 				}
 			}}
+			title={
+				theme.isDark ? "Switch to light mode" : "Switch to dark mode"
+			}
 		>
 			<Sun />
 			<Moon />

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Page } from "../components/Pages";
 import { Link, Flex } from "../components/Layout";
 import { Projects } from "../components/Projects";
-import { Socials } from "../components/Socials/Socials";
+import { Socials } from "../components/Socials";
 import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
 import { theme as themeLight } from "../assets/styles/theme";

@@ -86,8 +86,15 @@ export const footerStyles = (theme) => css`
 					border-left: solid 1px ${theme.colors.gray};
 					transform: translateY(1px);
 					transition: all 0.3s ease;
-					color: ${theme.colors.primary};
 					opacity: 0.5;
+
+					${theme.isDark
+						? css`
+								color: ${theme.colors.dark};
+						  `
+						: css`
+								color: ${theme.colors.primary};
+						  `}
 
 					${mq(Breakpoints.lg)} {
 						line-height: 1;
@@ -101,7 +108,7 @@ export const footerStyles = (theme) => css`
 						fill: none;
 						${theme.isDark
 							? css`
-									stroke: ${theme.colors.primaryLight};
+									stroke: ${theme.colors.dark};
 							  `
 							: css`
 									stroke: ${theme.colors.primary};

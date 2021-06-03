@@ -46,6 +46,20 @@ function Index() {
 				</strong>
 				.
 			</p>
+			<p>
+				If you’re on Windows{" "}
+				<strong>
+					make sure that you enable{" "}
+					<a
+						href="https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers"
+						target="_blank"
+						rel="noreferrer"
+					>
+						WSL integration
+					</a>
+				</strong>
+				.
+			</p>
 			<Space size={10} />
 			<Link
 				href="https://www.docker.com/products/docker-desktop"

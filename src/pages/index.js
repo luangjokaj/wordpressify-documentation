@@ -43,9 +43,8 @@ function Index() {
 								fullWidth={false}
 								onChange={() => {}}
 								onClick={() => {
-									const textBox = document.getElementById(
-										"npm-package",
-									);
+									const textBox =
+										document.getElementById("npm-package");
 									textBox.select();
 									document.execCommand("copy");
 								}}

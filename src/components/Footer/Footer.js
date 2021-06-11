@@ -35,7 +35,7 @@ function Footer({ className }) {
 					<Row gutterLg="default" className="first-row">
 						<Col xs={12} lg={6}>
 							<a
-								href="https://github.com/cherry-design-system/?ref=wordpressify.co"
+								href="https://github.com/luangjokaj/wordpressify/?ref=wordpressify.co"
 								target="_blank"
 								rel="noreferrer"
 								className="github-stars"

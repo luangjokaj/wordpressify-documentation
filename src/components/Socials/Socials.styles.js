@@ -46,11 +46,12 @@ export const socialStyles = (theme) => css`
 					box-shadow: inset 0 0 0 2px ${theme.colors.primary};
 					position: relative;
 
+					& > span,
 					& > div,
 					& svg {
 						position: absolute !important;
-						width: 100%;
-						height: 100%;
+						width: 100% !important;
+						height: 100% !important;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
@@ -72,23 +73,18 @@ export const socialStyles = (theme) => css`
 						display: block;
 						border: solid 1px ${theme.colors.grayLight};
 						position: absolute !important;
-						width: calc(100% - 12px);
-						height: calc(100% - 12px);
+						width: calc(100% - 12px) !important;
+						height: calc(100% - 12px) !important;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
 						padding: 6px;
 						border-radius: 50%;
 
-						&.full-width {
-							padding: 0;
-							border: none;
-
-							& svg {
-								width: 100%;
-								height: 100%;
-							}
-						}
+						${theme.isDark &&
+						css`
+							background: ${theme.colors.dark};
+						`}
 					}
 				}
 			}

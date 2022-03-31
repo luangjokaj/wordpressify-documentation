@@ -57,7 +57,7 @@ function Index() {
 									id="npm-package"
 								/>
 							</Flex>
-							<Space xs={10} lg="none" />
+							<Space size={10} />
 						</Col>
 						<Col xs={12} lg={4} textAlign="center">
 							<Space xs={10} lg="none" />

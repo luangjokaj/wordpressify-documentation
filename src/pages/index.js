@@ -34,6 +34,7 @@ function Index() {
 							</p>
 							<Space xs={10} lg={20} />
 							<Flex>
+								<Space size={5} horizontal />
 								<Link href="/docs" as="/docs">
 									Get Started
 								</Link>

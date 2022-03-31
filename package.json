@@ -30,6 +30,7 @@
 		"build": "next build",
 		"start": "next start",
 		"export": "next export",
+		"lint": "next lint",
 		"format": "prettier --write \"./**/*.{js,json,ts,tsx}\" \"!.node_modules/**\" \"!.next/**\"",
 		"analyze": "ANALYZE=true next build",
 		"analyze:server": "BUNDLE_ANALYZE=server next build",
@@ -48,7 +49,7 @@
 		"prettier": "^2.6.1",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
-		"react-markdown": "^8.0.1",
+		"react-markdown": "^8.0.2",
 		"react-syntax-highlighter": "^15.5.0"
 	}
 }

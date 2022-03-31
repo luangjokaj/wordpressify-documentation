@@ -152,8 +152,8 @@ const themeDark = {
 		},
 		button: {
 			size: {
-				mobile: "12px",
-				desktop: "14px",
+				mobile: "16px",
+				desktop: "16px",
 			},
 			lineheight: {
 				mobile: "1",
@@ -162,7 +162,7 @@ const themeDark = {
 		},
 		buttonBig: {
 			size: {
-				mobile: "16px",
+				mobile: "18px",
 				desktop: "18px",
 			},
 			lineheight: {
@@ -182,8 +182,8 @@ const themeDark = {
 		},
 		input: {
 			size: {
-				mobile: "12px",
-				desktop: "14px",
+				mobile: "16px",
+				desktop: "16px",
 			},
 			lineheight: {
 				mobile: "1",
@@ -192,7 +192,7 @@ const themeDark = {
 		},
 		inputBig: {
 			size: {
-				mobile: "16px",
+				mobile: "18px",
 				desktop: "18px",
 			},
 			lineheight: {

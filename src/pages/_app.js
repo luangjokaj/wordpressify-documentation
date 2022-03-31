@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useRouter, Router } from "next/router";
-import Head from "next/head";
 import NProgress from "nprogress";
 import { ThemeProvider } from "@emotion/react";
 import { Col, Container, MinHeight, Row } from "cherry-components";

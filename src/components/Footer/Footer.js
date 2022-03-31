@@ -23,7 +23,8 @@ function Footer({ className }) {
 	};
 
 	useEffect(() => {
-		return fetchGitHubStars();
+		fetchGitHubStars();
+		return;
 	}, []);
 
 	return (

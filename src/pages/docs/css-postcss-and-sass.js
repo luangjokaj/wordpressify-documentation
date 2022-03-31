@@ -10,8 +10,8 @@ const pluginsCode = `const pluginsListDev = [
         stage: 0,
         features: {
             'nesting-rules': true,
-            'color-mod-function': true,
-            'custom-media': true,
+            'color-function': true,
+            'custom-media-queries': true,
         },
     }),
     postCSSMixins,
@@ -24,8 +24,8 @@ const pluginsListProd = [
         stage: 0,
         features: {
             'nesting-rules': true,
-            'color-mod-function': true,
-            'custom-media': true,
+            'color-function': true,
+            'custom-media-queries': true,
         },
     }),
     postCSSMixins,
@@ -61,6 +61,10 @@ Description: WordPressify official theme.
 Version: 1.0
 Tags: responsive, clean, minimal, modern, documentation
 */`;
+
+const sassImportCode = `import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);`;
 
 function Index() {
 	return (
@@ -136,16 +140,13 @@ function Index() {
 				WordPressify is super flexible. You can install Sass and use it
 				as the main CSS preprocessor:
 			</p>
-			<CodeBlock
-				language="shell"
-				value={`npm install gulp-sass --save-dev`}
-			/>
+			<CodeBlock language="shell" value={`npm install sass gulp-sass`} />
 			<p>
 				Include Sass in <strong>gulpfile.js</strong>:
 			</p>
 			<CodeBlock
 				language="js"
-				value={`const sass = require('gulp-sass');`}
+				value={sassImportCode}
 			/>
 			<p>Change the gulp tasks stylesDev to:</p>
 			<CodeBlock language="js" value={sassTaskCode} />

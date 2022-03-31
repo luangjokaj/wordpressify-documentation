@@ -21,11 +21,9 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function App({ Component, pageProps }) {
 	const router = useRouter();
-	const [isLoaded, setIsLoaded] = useState(false);
 	const [currentTheme, setCurrentTheme] = useState(theme);
 
 	useEffect(() => {
-		setIsLoaded(true);
 		if (localStorage.theme === "dark") {
 			document.documentElement.classList.add("dark");
 			setCurrentTheme(themeDark);

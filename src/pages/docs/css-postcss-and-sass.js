@@ -144,10 +144,7 @@ function Index() {
 			<p>
 				Include Sass in <strong>gulpfile.js</strong>:
 			</p>
-			<CodeBlock
-				language="js"
-				value={sassImportCode}
-			/>
+			<CodeBlock language="js" value={sassImportCode} />
 			<p>Change the gulp tasks stylesDev to:</p>
 			<CodeBlock language="js" value={sassTaskCode} />
 			<p>

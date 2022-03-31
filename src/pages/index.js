@@ -9,6 +9,7 @@ import { Socials } from "../components/Socials";
 import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
 import { theme as themeLight } from "../assets/styles/theme";
+import { OverflowHidden } from "../components/Layout/OverflowHidden";
 
 function Index() {
 	const theme = useTheme();
@@ -16,55 +17,59 @@ function Index() {
 		<Page title="A build system designed to automate your WordPress development workflow">
 			<Container theme={theme}>
 				<Space xs={20} lg={150} />
-				<Row gutterLg="medium">
-					<Col xs={12} lg={8}>
-						<H1 size="hero2">
-							A build system designed to automate your WordPress
-							development workflow.
-						</H1>
-						<Space xs="none" lg={10} />
-						<p>
-							WordPressify is a simple tool that helps you build
-							WordPress themes and plugins. It takes care of the
-							development experience by providing a web server
-							with a database out of the box, zero-configuration
-							required.
-						</p>
-						<Space xs={10} lg={20} />
-						<Flex>
-							<Link href="/docs" as="/docs">
-								Get Started
-							</Link>
-							<Space size={20} horizontal />
-							<Input
-								variant="primary"
-								theme={themeLight}
-								value="npx wordpressify"
-								fullWidth={false}
-								onChange={() => {}}
-								onClick={() => {
-									const textBox =
-										document.getElementById("npm-package");
-									textBox.select();
-									document.execCommand("copy");
-								}}
-								spellCheck="false"
-								id="npm-package"
+				<OverflowHidden>
+					<Row gutterLg="medium">
+						<Col xs={12} lg={8}>
+							<H1 size="hero2">
+								A build system designed to automate your
+								WordPress development workflow.
+							</H1>
+							<Space xs="none" lg={10} />
+							<p>
+								WordPressify is a simple tool that helps you
+								build WordPress themes and plugins. It takes
+								care of the development experience by providing
+								a web server with a database out of the box,
+								zero-configuration required.
+							</p>
+							<Space xs={10} lg={20} />
+							<Flex>
+								<Link href="/docs" as="/docs">
+									Get Started
+								</Link>
+								<Space size={20} horizontal />
+								<Input
+									variant="primary"
+									theme={themeLight}
+									value="npx wordpressify"
+									fullWidth={false}
+									onChange={() => {}}
+									onClick={() => {
+										const textBox =
+											document.getElementById(
+												"npm-package",
+											);
+										textBox.select();
+										document.execCommand("copy");
+									}}
+									spellCheck="false"
+									id="npm-package"
+								/>
+							</Flex>
+							<Space xs={10} lg="none" />
+						</Col>
+						<Col xs={12} lg={4} textAlign="center">
+							<Space xs={10} lg="none" />
+							<Image
+								src="/img/illustration.svg"
+								alt="WordPressify home page illustration"
+								width={445}
+								height={445}
 							/>
-						</Flex>
-						<Space xs={10} lg="none" />
-					</Col>
-					<Col xs={12} lg={4} textAlign="center">
-						<Space xs={10} lg="none" />
-						<Image
-							src="/img/illustration.svg"
-							alt="WordPressify home page illustration"
-							width={445}
-							height={445}
-						/>
-						<Space xs={10} lg="none" />
-					</Col>
-				</Row>
+							<Space xs={10} lg="none" />
+						</Col>
+					</Row>
+				</OverflowHidden>
 				<Space xs={10} lg={150} />
 			</Container>
 			<Mockup />

@@ -12,6 +12,7 @@ import { Footer } from "../components/Footer/Footer";
 import { Sidebar } from "../components/Sidebar";
 import { ScrollToTop } from "../components/ScrollToTop";
 import { ThemeSwitcher } from "../components/ThemeSwitcher/ThemeSwitcher";
+import { OverflowHidden } from "../components/Layout/OverflowHidden";
 
 NProgress.configure({ parent: "#header-inner" });
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -66,14 +67,21 @@ function App({ Component, pageProps }) {
 				<MinHeight theme={currentTheme}>
 					{router.pathname.includes("/docs") ? (
 						<Container theme={currentTheme} fluid>
-							<Row alignItems="flex-start" gutterLg="medium">
-								<Col xs={12} lg={3} sticky theme={currentTheme}>
-									<Sidebar />
-								</Col>
-								<Col xs={12} lg={9} id="doc-content">
-									<Component {...pageProps} />
-								</Col>
-							</Row>
+							<OverflowHidden>
+								<Row alignItems="flex-start" gutterLg="medium">
+									<Col
+										xs={12}
+										lg={3}
+										sticky
+										theme={currentTheme}
+									>
+										<Sidebar />
+									</Col>
+									<Col xs={12} lg={9} id="doc-content">
+										<Component {...pageProps} />
+									</Col>
+								</Row>
+							</OverflowHidden>
 						</Container>
 					) : (
 						<Component {...pageProps} />

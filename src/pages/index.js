@@ -3,7 +3,7 @@ import { useTheme } from "@emotion/react";
 import { Col, Container, Input, Row, Space, H1 } from "cherry-components";
 import Image from "next/image";
 import { Page } from "../components/Pages";
-import { Link, Flex } from "../components/Layout";
+import { Link } from "../components/Layout";
 import { Projects } from "../components/Projects";
 import { Socials } from "../components/Socials";
 import { Features } from "../components/Features";
@@ -33,30 +33,27 @@ function Index() {
 								zero-configuration required.
 							</p>
 							<Space xs={10} lg={20} />
-							<Flex>
-								<Space size={5} horizontal />
-								<Link href="/docs" as="/docs">
-									Get Started
-								</Link>
-								<Space size={20} horizontal />
-								<Input
-									variant="primary"
-									theme={themeLight}
-									value="npx wordpressify"
-									fullWidth={false}
-									onChange={() => {}}
-									onClick={() => {
-										const textBox =
-											document.getElementById(
-												"npm-package",
-											);
-										textBox.select();
-										document.execCommand("copy");
-									}}
-									spellCheck="false"
-									id="npm-package"
-								/>
-							</Flex>
+							<Space size={5} horizontal />
+							<Link href="/docs" as="/docs">
+								Get Started
+							</Link>
+							<Space xs={20} lg="none" />
+							<Space xs={5} lg={20} horizontal />
+							<Input
+								variant="primary"
+								theme={themeLight}
+								value="npx wordpressify"
+								fullWidth={false}
+								onChange={() => {}}
+								onClick={() => {
+									const textBox =
+										document.getElementById("npm-package");
+									textBox.select();
+									document.execCommand("copy");
+								}}
+								spellCheck="false"
+								id="npm-package"
+							/>
 							<Space size={10} />
 						</Col>
 						<Col xs={12} lg={4} textAlign="center">

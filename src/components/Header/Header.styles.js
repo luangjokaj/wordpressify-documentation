@@ -96,7 +96,11 @@ export const headerStyles = (theme, isLoaded) => css`
 			${isLoaded &&
 			css`
 				max-width: calc(100% - 120px);
-				width: 272px;
+				width: 200px;
+
+				${mq(Breakpoints.lg)} {
+					width: 272px;
+				}
 			`}
 
 			& svg {

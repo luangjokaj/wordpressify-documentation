@@ -7,6 +7,7 @@ const themeDark = {
 		marginContainer: { mobile: "20px", desktop: "20px" },
 		marginRow: { default: "-10px", medium: "-30px", big: "-50px" },
 		gutterCol: { default: "10px", medium: "30px", big: "50px" },
+		breakpoints: [0, 576, 768, 992, 1200, 1440, 1920],
 	},
 	colors: {
 		primaryLight: "#B8D401",

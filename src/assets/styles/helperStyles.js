@@ -71,6 +71,7 @@ export const shadowHoverStyles = (theme) => css`
 `;
 
 export const eyebrowFontStyles = (theme) => css`
+	font-family: ${theme.fonts.special};
 	font-size: ${theme.sizes.eyebrow.size.mobile};
 	line-height: ${theme.sizes.eyebrow.lineheight.mobile};
 	font-weight: 600;

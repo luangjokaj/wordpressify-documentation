@@ -27,6 +27,7 @@ const globalStyles = (
 				background: ${theme.colors.light};
 				color: ${theme.colors.dark};
 				margin: 0;
+				overflow-x: hidden;
 
 				${mq(Breakpoints.lg)} {
 					font-size: ${theme.sizes.text.size.desktop};

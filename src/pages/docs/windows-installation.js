@@ -15,12 +15,8 @@ function Index() {
 				exactely the same on Windows as well.
 			</p>
 			<Space size={10} />
-			<Link
-				href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"
-				external
-				frame
-			>
-				WSL Installation Guide
+			<Link href="/docs/set-up-project" as="/docs/set-up-project" frame>
+				Set Up Project
 			</Link>
 			<Space size={20} />
 			<DocNavWrapper>

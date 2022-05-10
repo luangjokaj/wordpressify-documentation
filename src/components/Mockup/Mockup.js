@@ -13,7 +13,8 @@ function Mockup() {
 				</div>
 				<code className="content">
 					// <span className="soft">Step 1:</span> Create a directory
-					for the new project and<br />
+					for the new project and
+					<br />
 					// run WordPressify to generate the file structure *
 					<br />
 					<span className="light">$</span>{" "}

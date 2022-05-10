@@ -21,7 +21,10 @@ function Index() {
 				Alternatively if you don't have NodeJS installed locally, use
 				Docker commands:
 			</p>
-			<CodeBlock language="shell" value={`docker compose run --rm nodejs npm run backup`} />
+			<CodeBlock
+				language="shell"
+				value={`docker compose run --rm nodejs npm run backup`}
+			/>
 			<p>
 				Files will be compressed in a zip file and stored in the
 				directory:

@@ -11,7 +11,8 @@ function Index() {
 			<H1 size="hero1">Windows Installation</H1>
 			<Space xs={10} lg={30} />
 			<p>
-				Make sure Docker is installed, and WordPressify should run exactely the same on Windows as well.
+				Make sure Docker is installed, and WordPressify should run
+				exactely the same on Windows as well.
 			</p>
 			<Space size={10} />
 			<Link

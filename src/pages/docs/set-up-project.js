@@ -123,7 +123,10 @@ function Index() {
 				Alternatively if you don't have NodeJS installed locally, use
 				Docker commands:
 			</p>
-			<CodeBlock language="shell" value={`docker compose down -v && docker compose build`} />
+			<CodeBlock
+				language="shell"
+				value={`docker compose down -v && docker compose build`}
+			/>
 
 			<Space size={1} />
 			<hr />
@@ -144,7 +147,10 @@ function Index() {
 				Alternatively if you don't have NodeJS installed locally, use
 				Docker commands:
 			</p>
-			<CodeBlock language="shell" value={`docker compose run --rm nodejs npm run prod`} />
+			<CodeBlock
+				language="shell"
+				value={`docker compose run --rm nodejs npm run prod`}
+			/>
 			<p>The template will be saved as a zip file in:</p>
 			<CodeBlock language="shell" value={`dist/wordpressify.zip`} />
 			<Space size={10} />

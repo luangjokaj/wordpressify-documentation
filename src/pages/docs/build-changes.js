@@ -20,7 +20,7 @@ function Index() {
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">Build Changes</H1>
 			<p>
-			<Space xs={10} lg={30} />
+				<Space xs={10} lg={30} />
 				Any changes to the followin list of files require a restart of
 				the containers.
 			</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, H1, H2, H3, H4 } from "cherry-components";
+import { Space, H1, H2, H3, H4, H5 } from "cherry-components";
 import { Page } from "../../components/Pages";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
@@ -29,6 +29,12 @@ function Index() {
 			</p>
 			<CodeBlock language="text" value={`PROXY_PORT=3030`} />
 			<p>And now try again.</p>
+			<H5 size="h5">403 Forbidden or 502 Bad Gateway after starting</H5>
+			<p>
+				If you see one of these error messages in your browser after you
+				started WordPressify, means that files are still being prepared.
+				Just give it a few more moments and reload the page.
+			</p>
 			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav href="/docs/deployment" as="/docs/deployment" prev>

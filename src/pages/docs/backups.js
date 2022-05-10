@@ -16,7 +16,12 @@ function Index() {
 				the current state of the build which will include all server
 				files. To back up your build run the command:
 			</p>
-			<CodeBlock language="shell" value={`npm run backup`} />
+			<CodeBlock language="shell" value={`npm run export:backup`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock language="shell" value={`docker compose run --rm nodejs npm run backup`} />
 			<p>
 				Files will be compressed in a zip file and stored in the
 				directory:
@@ -25,11 +30,11 @@ function Index() {
 			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav
-					href="/docs/change-php-and-docker-settings"
-					as="/docs/change-php-and-docker-settings"
+					href="/docs/build-changes"
+					as="/docs/build-changes"
 					prev
 				>
-					Change PHP and Docker settings
+					Build Changes
 				</DocNav>
 				<DocNav
 					href="/docs/code-style-rules"

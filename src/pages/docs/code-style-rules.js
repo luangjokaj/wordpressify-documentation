@@ -25,7 +25,12 @@ function Index() {
 				</a>{" "}
 				with the command:
 			</p>
-			<CodeBlock language="shell" value={`npm run lint:css`} />
+			<CodeBlock language="shell" value={`npm run lintcss`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock language="shell" value={`docker compose run --rm nodejs npm run lint:css`} />
 			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav href="/docs/backups" as="/docs/backups" prev>

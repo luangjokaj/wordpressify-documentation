@@ -17,6 +17,7 @@ function Index() {
 		<Page title="External Libraries">
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">External Libraries</H1>
+			<Space xs={10} lg={30} />
 			<p>
 				Including external JavaScript libraries is as simple as
 				installing the npm script and including it in the{" "}
@@ -45,11 +46,11 @@ function Index() {
 					ES6 JavaScript
 				</DocNav>
 				<DocNav
-					href="/docs/change-php-and-docker-settings"
-					as="/docs/change-php-and-docker-settings"
+					href="/docs/build-changes"
+					as="/docs/build-changes"
 					next
 				>
-					Change PHP and Docker
+					Build Changes
 				</DocNav>
 			</DocNavWrapper>
 		</Page>

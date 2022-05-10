@@ -8,8 +8,8 @@ export const navigationData = [
 				label: "Introduction",
 			},
 			{
-				href: "/docs/installing-nodejs-and-docker",
-				label: "Installing Node.js and Docker",
+				href: "/docs/installing-docker",
+				label: "Installing Docker",
 			},
 			{
 				href: "/docs/set-up-project",
@@ -38,8 +38,8 @@ export const navigationData = [
 				label: "External Libraries",
 			},
 			{
-				href: "/docs/change-php-and-docker-settings",
-				label: "Change PHP and Docker settings",
+				href: "/docs/build-changes",
+				label: "Build Changes",
 			},
 		],
 	},

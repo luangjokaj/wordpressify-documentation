@@ -9,6 +9,7 @@ function Index() {
 		<Page title="ES6 JavaScript">
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">ES6 JavaScript</H1>
+			<Space xs={10} lg={30} />
 			<p>
 				WordPressify supports ES6 JavaScript with Babel. Babel has
 				support for the latest version of JavaScript through syntax

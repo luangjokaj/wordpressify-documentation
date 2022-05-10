@@ -9,6 +9,7 @@ function Index() {
 		<Page title="Deployment">
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">Deployment</H1>
+			<Space xs={10} lg={30} />
 			<p>
 				The recommended solution is to go with&nbsp;
 				<a href="https://wppusher.com/">WP Pusher</a>. It is easy and
@@ -31,7 +32,15 @@ function Index() {
 				At this point go to your terminal, navigate to your WordPressify
 				project and generate your distribution files with the command:
 			</p>
-			<CodeBlock language="shell" value={`npm run prod`} />
+			<CodeBlock language="shell" value={`npm run export`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock
+				language="shell"
+				value={`docker compose run --rm nodejs npm run prod`}
+			/>
 			<p>Navigate to your theme distribution files on:</p>
 			<CodeBlock language="shell" value={`dist/theme/<themeName>`} />
 			<p>

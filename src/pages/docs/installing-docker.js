@@ -6,25 +6,10 @@ import { DocNav, DocNavWrapper } from "../../components/DocNav";
 
 function Index() {
 	return (
-		<Page title="Installing Node.js and Docker">
+		<Page title="Installing Docker">
 			<Space xs={20} lg={40} />
-			<H1 size="hero1">Installing Node.js and Docker</H1>
+			<H1 size="hero1">Installing Docker</H1>
 			<Space xs={10} lg={30} />
-			<p>WordPressify requires Node.js v12+ and Docker Compose.</p>
-			<H2>Node.js</H2>
-			<p>
-				Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript
-				engine. Node.js uses an event-driven, non-blocking I/O model
-				that makes it lightweight and efficient. Node.js’ package
-				ecosystem, npm, is the largest ecosystem of open source
-				libraries in the world.
-			</p>
-			<p>You can download Node.js here.</p>
-			<Space size={10} />
-			<Link href="https://nodejs.org/en/download/" frame external>
-				Download Node.js
-			</Link>
-			<Space size={20} />
 			<H3 size="h2">Docker</H3>
 			<p>
 				A Docker container is a standard unit of software that packages

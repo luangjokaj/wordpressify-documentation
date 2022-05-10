@@ -30,30 +30,22 @@ function Index() {
 				JavaScript. WordPressify allows easy import of external
 				JavaScript libraries and npm scripts, it has a flexible build
 				and can be easily customized with gulp tasks.
+				<br />
+				<br />
+				It works on Mac, Windows and Linux. And requires only Docker as
+				a main dependency.
 			</p>
 			<Space size={10} />
-			<Box noPadding isVideo>
-				<iframe
-					height="315"
-					src="https://www.youtube.com/embed/dDl0pMtTdSg"
-					frameBorder="0"
-					title="YouTube video player"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowFullScreen
-					className="video"
-				/>
-			</Box>
-			<Space size={20} />
 			<DocNavWrapper>
 				<DocNav href="/" as="/" prev>
 					Home
 				</DocNav>
 				<DocNav
-					href="/docs/installing-nodejs-and-docker"
-					as="/docs/installing-nodejs-and-docker"
+					href="/docs/installing-docker"
+					as="/docs/installing-docker"
 					next
 				>
-					Installing Node.js and Docker
+					Installing Docker
 				</DocNav>
 			</DocNavWrapper>
 		</Page>

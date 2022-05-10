@@ -13,7 +13,7 @@ function Mockup() {
 				</div>
 				<code className="content">
 					// <span className="soft">Step 1:</span> Create a directory
-					for the new WordPress website and from there <br />
+					for the new project and<br />
 					// run WordPressify to generate the file structure *
 					<br />
 					<span className="light">$</span>{" "}
@@ -24,20 +24,20 @@ function Mockup() {
 					environment
 					<br />
 					<span className="light">$</span>{" "}
-					<span className="highlight">npm run dev</span>
+					<span className="highlight">npm run start</span>
 					<br />
 					<br />
 					// <span className="soft">Step 3:</span> Generate
 					distribution files
 					<br />
 					<span className="light">$</span>{" "}
-					<span className="highlight">npm run prod</span>
+					<span className="highlight">npm run export</span>
 					<br />
 					<br />
 					<span className="light">🚀</span>
 					<br />
 					<br />
-					// * WordPressify requires Node v12+ and Docker Compose.
+					// * WordPressify requires Docker Compose.
 				</code>
 			</div>
 		</div>

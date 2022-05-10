@@ -17,12 +17,14 @@ const fileStructureCode = `├── build/                   # Build files
 │   ├── plugins/             # WordPress plugins
 │   ├── theme/               # PHP Template files
 └── .babelrc                 # Babel configuration
-└── .env.in                  # Environment variables
-└── .gitignore               # Git ignored files
+└── .dockerignore            # Docker ignore file
 └── .editorconfig            # Editor code styles
+└── .env_example             # Environment variables
+└── .gitignore               # Git ignored files
 └── .stylelintrc             # Stylelint configuration
-└── docker-compose.yml       # Docker configuration
-└── Dockerfile.in            # Docker file
+└── docker-compose.yml       # Docker files
+└── Dockerfile-nodejs        # Docker files
+└── Dockerfile-wordpress     # Docker files
 └── gulpfile.js              # Gulp configuration
 └── LICENSE                  # License agreements
 └── package-lock.json        # Packages lock file
@@ -42,6 +44,7 @@ function Index() {
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">Set Up Project</H1>
 			<Space xs={10} lg={30} />
+			<p>Make sure Docker is running, otherwise the process will fail.</p>
 			<CodeBlock
 				language="text"
 				value={fileStructureCode}
@@ -60,10 +63,6 @@ function Index() {
 				<a href="#start-workflow">
 					<stronng>Start workflow</stronng>
 				</a>
-			</p>
-			<p>
-				Make sure Docker is running, otherwise this ☝ command will
-				fail.
 			</p>
 			<Space size={1} />
 			<hr />
@@ -86,31 +85,13 @@ function Index() {
 				<strong>./installer/package.json</strong> and continue with the
 				dependency installation.
 			</p>
-			<Space size={10} />
-			<H4 size="h5">Install dependencies</H4>
-			<Space size={10} />
-			<CodeBlock language="shell" value={`npm install`} />
-			<Space size={10} />
-			<H4 size="h5">Build environment</H4>
-			<p>
-				On the first run, WordPressify needs to set up a local server
-				and a database for the new WordPress installation, we do this
-				once by running the command:
-			</p>
-			<CodeBlock language="shell" value={`npm run env:build`} />
-			<p>
-				Make sure Docker is running, otherwise this ☝ command will
-				fail.
-			</p>
 			<Space size={1} />
 			<hr />
 			<Space size={10} />
 			<H4 size="h5">Change template name</H4>
 			<Space size={10} />
 			<p>
-				At this point WordPressify is installed and ready to be used for
-				the first time. Before starting, open gulpfile.js and edit your
-				template name:
+				Before starting, open gulpfile.js and edit your template name:
 			</p>
 			<CodeBlock language="js" value={themeNameCode} />
 			<Space size={10} />
@@ -118,7 +99,12 @@ function Index() {
 				Start workflow
 			</H4>
 			<p>To start the development server run the command:</p>
-			<CodeBlock language="shell" value={`npm run dev`} />
+			<CodeBlock language="shell" value={`npm run start`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock language="shell" value={`docker compose up`} />
 			<p>You are ready to go! Happy coding! 🤓</p>
 			<p>
 				Make sure Docker is running, otherwise this ☝ command will
@@ -127,16 +113,18 @@ function Index() {
 			<Space size={1} />
 			<hr />
 			<Space size={10} />
-			<H4 size="h5">Bring down environment</H4>
-			<p>
-				To stop the WordPressify server and database for the project
-				run:
-			</p>
-			<CodeBlock language="shell" value={`npm run env:stop`} />
-			<Space size={10} />
 			<H4 size="h5">Rebuild environment</H4>
-			<p>To rebuild the WordPressify project environment run:</p>
-			<CodeBlock language="shell" value={`npm run env:rebuild`} />
+			<p>
+				To rebuild the WordPressify environment, with a fresh
+				installation and a clean database run:
+			</p>
+			<CodeBlock language="shell" value={`npm run rebuild`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock language="shell" value={`docker compose down -v && docker compose build`} />
+
 			<Space size={1} />
 			<hr />
 			<Space size={10} />
@@ -151,7 +139,12 @@ function Index() {
 			<Space size={10} />
 			<H4 size="h2">Production Template</H4>
 			<p>To generate your distribution files run the command:</p>
-			<CodeBlock language="shell" value={`npm run prod`} />
+			<CodeBlock language="shell" value={`npm run export`} />
+			<p>
+				Alternatively if you don't have NodeJS installed locally, use
+				Docker commands:
+			</p>
+			<CodeBlock language="shell" value={`docker compose run --rm nodejs npm run prod`} />
 			<p>The template will be saved as a zip file in:</p>
 			<CodeBlock language="shell" value={`dist/wordpressify.zip`} />
 			<Space size={10} />

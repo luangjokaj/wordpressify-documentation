@@ -9,6 +9,7 @@ function Index({ posts = [] }) {
 		<Page title="Using Xdebug">
 			<Space xs={20} lg={40} />
 			<H1 size="hero1">Using Xdebug</H1>
+			<Space xs={10} lg={30} />
 			<p>
 				WordPressify comes with&nbsp;
 				<a href="https://xdebug.org/**">Xdebug</a>&nbsp;preconfigured so
@@ -58,30 +59,6 @@ function Index({ posts = [] }) {
 				After setting up your IDE, select <strong>Debug</strong> in the
 				Xdebug extension and reload the page.
 			</p>
-			<Space size={1} />
-			<hr />
-			<Space size={10} />
-			<H2>Xdebug on Linux</H2>
-			<p>
-				After setting up your IDE, select <strong>Debug</strong> in the
-				Xdebug extension and reload the page.
-			</p>
-			<p>Make sure that the containers are running:</p>
-			<CodeBlock language="shell" value={`npm run env:start`} />
-			<p>
-				Find the host ip that docker sees by connecting to the
-				WordPressify website from your web browser, and then inspecting
-				nginx logs:
-			</p>
-			<CodeBlock language="shell" value={`docker-compose logs server`} />
-			<p>
-				The first field will be your host IP address. Copy that host
-				address and paste it inside <strong>config/php.ini</strong> as
-				the value for <strong>xdebug.remote_host</strong>.
-			</p>
-			<H3 size="h4">Restart PHP</H3>
-			<CodeBlock language="shell" value={`npm run env:restart	`} />
-			<p>Xdebug should be working now.</p>
 			<Space size={10} />
 			<DocNavWrapper>
 				<DocNav

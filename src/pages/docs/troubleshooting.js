@@ -24,13 +24,10 @@ function Index() {
 				ERROR: Bind for 0.0.0.0:3020 failed: port is already allocated
 			</H4>
 			<p>
-				Make sure there are no other Docker containers running the same
-				port 3020. You can stop all Docker containers with the command:
+				This means the default port is already in use. In your{" "}
+				<strong>.env</strong> file just specify a different port:
 			</p>
-			<CodeBlock
-				language="shell"
-				value={`docker stop $(docker ps -a -q)`}
-			/>
+			<CodeBlock language="text" value={`PROXY_PORT=3030`} />
 			<p>And now try again.</p>
 			<Space size={10} />
 			<DocNavWrapper>

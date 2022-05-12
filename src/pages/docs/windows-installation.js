@@ -13,7 +13,7 @@ function Index() {
 			<p>
 				Make sure Docker is installed, and WordPressify should run
 				exactly the same on all platforms. Linux, Windows, and Mac.
-				Since v.0.4.0 you can use WordPressify without WSL.
+				Since v0.4.0 you can use WordPressify without WSL.
 			</p>
 			<Space size={10} />
 			<Link href="/docs/set-up-project" as="/docs/set-up-project" frame>

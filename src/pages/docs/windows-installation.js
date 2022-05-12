@@ -12,7 +12,8 @@ function Index() {
 			<Space xs={10} lg={30} />
 			<p>
 				Make sure Docker is installed, and WordPressify should run
-				exactely the same on Windows as well.
+				exactly the same on all platforms. Linux, Windows, and Mac.
+				Since v.0.4.0 you can use WordPressify without WSL.
 			</p>
 			<Space size={10} />
 			<Link href="/docs/set-up-project" as="/docs/set-up-project" frame>

@@ -4,6 +4,22 @@ import { Page } from "../../components/Pages";
 import { DocNav, DocNavWrapper } from "../../components/DocNav";
 import { CodeBlock } from "../../components/CodeBlock";
 
+const json = `{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Listen for Xdebug",
+			"type": "php",
+			"request": "launch",
+			"port": 9003,
+			"log": true,
+			"pathMappings": {
+				"/var/www/html": "\${workspaceFolder}/build/wordpress"
+			}
+		}
+	]
+}`;
+
 function Index({ posts = [] }) {
 	return (
 		<Page title="Using Xdebug">
@@ -59,7 +75,8 @@ function Index({ posts = [] }) {
 				After setting up your IDE, select <strong>Debug</strong> in the
 				Xdebug extension and reload the page.
 			</p>
-			<Space size={10} />
+			<CodeBlock language="json" value={json} description="launch.json" />
+			<Space size={20} />
 			<DocNavWrapper>
 				<DocNav
 					href="/docs/code-style-rules"

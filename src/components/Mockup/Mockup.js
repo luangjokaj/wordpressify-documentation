@@ -38,7 +38,7 @@ function Mockup() {
 					<span className="light">🚀</span>
 					<br />
 					<br />
-					// * WordPressify requires Docker Compose.
+					// * WordPressify requires Docker.
 				</code>
 			</div>
 		</div>

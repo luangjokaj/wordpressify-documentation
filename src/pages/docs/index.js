@@ -36,6 +36,18 @@ function Index() {
 				the main dependency.
 			</p>
 			<Space size={10} />
+			<Box noPadding isVideo>
+				<iframe
+					height="315"
+					src="https://www.youtube.com/embed/2-_gyY7WIvE"
+					frameBorder="0"
+					title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowFullScreen
+					className="video"
+				/>
+			</Box>
+			<Space size={20} />
 			<DocNavWrapper>
 				<DocNav href="/" as="/" prev>
 					Home

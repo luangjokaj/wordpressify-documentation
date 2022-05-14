@@ -30,7 +30,7 @@ function Index() {
 								build WordPress themes and plugins. It takes
 								care of the development experience by providing
 								a web server with a database out of the box,
-								zero-configuration required.
+								with zero configuration required.
 							</p>
 							<Space xs={10} lg={20} />
 							<Space size={5} horizontal />

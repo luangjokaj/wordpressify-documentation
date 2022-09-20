@@ -57,8 +57,8 @@ function Projects() {
 						<Image
 							src="/img/projects/nextify.svg"
 							alt="Nextify Logo"
-							width={186.28}
-							height={75}
+							width={302.5}
+							height={40}
 						/>
 						<p>React apps using Next.js and Emotion.</p>
 					</span>

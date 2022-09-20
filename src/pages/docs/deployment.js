@@ -19,8 +19,8 @@ function Index() {
 			</p>
 			<p>
 				Then navigate to your WordPress administration on your live site
-				and install the downloaded plugin: Plugins -> Add New -> Upload
-				Plugin -> Install Now.
+				and install the downloaded plugin: Plugins -&gt; Add New -&gt; Upload
+				Plugin -&gt; Install Now.
 			</p>
 			<p>
 				Activate the plugin and navigate to the plugin page{" "}

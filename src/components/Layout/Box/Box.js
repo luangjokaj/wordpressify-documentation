@@ -5,13 +5,12 @@ import { boxStyles } from "./Box.styles";
 function Box({ className, children, href, as, noPadding, isVideo }) {
 	if (as) {
 		return (
-			<Link href={href} as={as}>
-				<a
-					css={(theme) => boxStyles(theme, as, noPadding, isVideo)}
-					href={href}
-				>
-					{children && children}
-				</a>
+			<Link
+				href={href}
+				as={as}
+				css={(theme) => boxStyles(theme, as, noPadding, isVideo)}
+			>
+				{children && children}
 			</Link>
 		);
 	}

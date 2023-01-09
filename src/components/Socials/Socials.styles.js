@@ -46,6 +46,14 @@ export const socialStyles = (theme) => css`
 					box-shadow: inset 0 0 0 2px ${theme.colors.primary};
 					position: relative;
 
+					& img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						border-radius: 50%;
+					}
+
 					& > span,
 					& > div,
 					& svg {
@@ -56,7 +64,8 @@ export const socialStyles = (theme) => css`
 						left: 50%;
 						transform: translate(-50%, -50%);
 
-						& img {
+						& img,
+						& svg {
 							border-radius: 50%;
 							padding: 6px !important;
 						}
@@ -107,9 +116,15 @@ export const socialStyles = (theme) => css`
 
 					& svg {
 						margin: auto;
+					}
+				}
 
-						& path {
-							fill: ${theme.colors.light};
+				&:not(.figma) {
+					& span {
+						& svg {
+							& path {
+								fill: ${theme.colors.light};
+							}
 						}
 					}
 				}
@@ -170,4 +185,14 @@ export const socialStyles = (theme) => css`
 			}
 		}
 	}
+`;
+
+export const rightFlextyles = (theme) => css`
+	${mq(Breakpoints.lg)} {
+		display: flex;
+	}
+`;
+
+export const rightSideStyles = (theme) => css`
+	margin: auto 0 auto auto;
 `;

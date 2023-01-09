@@ -15,23 +15,16 @@ function CustomLink({
 }) {
 	if (as) {
 		return (
-			<Link href={href} as={as}>
-				<a
-					className={className}
-					css={(theme) =>
-						buttonStyles(
-							theme,
-							variant,
-							size,
-							frame,
-							props.disabled,
-						)
-					}
-					{...props}
-					href={href}
-				>
-					{children}
-				</a>
+			<Link
+				href={href}
+				as={as}
+				className={className}
+				css={(theme) =>
+					buttonStyles(theme, variant, size, frame, props.disabled)
+				}
+				{...props}
+			>
+				{children}
 			</Link>
 		);
 	}

@@ -30,20 +30,14 @@ function Header({ themeSwitcher }) {
 		<header css={(theme) => headerStyles(theme, isLoaded)}>
 			<Container theme={theme} className="container">
 				<div className="inner-wrapper" id="header-inner">
-					<Link href="/" as="/">
-						<a className="logo">
-							<Logo />
-						</a>
+					<Link href="/" as="/" className="logo">
+						<Logo />
 					</Link>
 					<ul>
 						<li>
 							<Link href="/docs" as="/docs">
-								<a>
-									<span className="desktop">
-										Documentation
-									</span>
-									<span className="mobile">Docs</span>
-								</a>
+								<span className="desktop">Documentation</span>
+								<span className="mobile">Docs</span>
 							</Link>
 							{version && (
 								<small className="version">v{version}</small>

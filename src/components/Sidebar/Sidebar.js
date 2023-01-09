@@ -68,25 +68,17 @@ function Sidebar({ className }) {
 													<Link
 														href={childItem.href}
 														as={childItem.href}
+														className={
+															router.pathname ===
+															childItem.href
+																? "active"
+																: ""
+														}
+														onClick={() =>
+															setMenuOpen(false)
+														}
 													>
-														<a
-															href={
-																childItem.href
-															}
-															className={
-																router.pathname ===
-																childItem.href
-																	? "active"
-																	: ""
-															}
-															onClick={() =>
-																setMenuOpen(
-																	false,
-																)
-															}
-														>
-															{childItem.label}
-														</a>
+														{childItem.label}
 													</Link>
 												</li>
 											),
@@ -161,32 +153,26 @@ function Sidebar({ className }) {
 																			as={
 																				subItem.href
 																			}
+																			onClick={() =>
+																				setMenuOpen(
+																					false,
+																				)
+																			}
+																			className={
+																				router.pathname ===
+																				subItem.href
+																					? "active"
+																					: ""
+																			}
+																			onClick={() =>
+																				setMenuOpen(
+																					false,
+																				)
+																			}
 																		>
-																			<a
-																				href={
-																					subItem.href
-																				}
-																				onClick={() =>
-																					setMenuOpen(
-																						false,
-																					)
-																				}
-																				className={
-																					router.pathname ===
-																					subItem.href
-																						? "active"
-																						: ""
-																				}
-																				onClick={() =>
-																					setMenuOpen(
-																						false,
-																					)
-																				}
-																			>
-																				{
-																					subItem.label
-																				}
-																			</a>
+																			{
+																				subItem.label
+																			}
 																		</Link>
 																	</li>
 																),

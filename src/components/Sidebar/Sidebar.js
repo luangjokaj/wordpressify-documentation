@@ -164,11 +164,6 @@ function Sidebar({ className }) {
 																					? "active"
 																					: ""
 																			}
-																			onClick={() =>
-																				setMenuOpen(
-																					false,
-																				)
-																			}
 																		>
 																			{
 																				subItem.label

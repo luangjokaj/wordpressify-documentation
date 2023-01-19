@@ -3,10 +3,10 @@ import { createContext, useState } from "react";
 const ToastNotificationsContext = createContext({
 	notifications: [],
 	addNotification: () => null,
-	removeNotification: () => null,
 });
 
 const color = (config) => config?.color || "info";
+const autoHide = (config) => config?.autoHide || 0;
 
 function ToastNotificationsProvider({ children }) {
 	const [notifications, setToastNotifications] = useState([]);
@@ -18,7 +18,7 @@ function ToastNotificationsProvider({ children }) {
 				text,
 				status: "hidden",
 				color: color(config),
-				autoHide: config.autoHide,
+				autoHide: autoHide(config),
 			},
 		]);
 		setTimeout(() => {
@@ -28,33 +28,15 @@ function ToastNotificationsProvider({ children }) {
 					text,
 					status: "visible",
 					color: color(config),
-					autoHide: config.autoHide,
+					autoHide: autoHide(config),
 				},
 			]);
-		}, 300);
-	};
-
-	const removeNotification = (notification) => {
-		const updatedNotification = notifications.filter(
-			(t) => t.text !== notification.text,
-		);
-		setToastNotifications([
-			...updatedNotification,
-			{
-				text: notification.text,
-				status: "hidden",
-				color: notification.color,
-				autoHide: notification.autoHide,
-			},
-		]);
-		setTimeout(() => {
-			setToastNotifications(updatedNotification);
-		}, 300);
+		}, 100);
 	};
 
 	return (
 		<ToastNotificationsContext.Provider
-			value={{ notifications, addNotification, removeNotification }}
+			value={{ notifications, addNotification }}
 		>
 			{children}
 		</ToastNotificationsContext.Provider>

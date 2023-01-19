@@ -7,7 +7,7 @@ import {
 
 export const notificationsStyles = (theme) => css`
 	position: fixed;
-	top: 8px;
+	top: 12px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 99999;
@@ -18,11 +18,13 @@ export const notificationsStyles = (theme) => css`
 	& li {
 		justify-content: center;
 		display: flex;
-		margin: 10px 0;
+		margin: 0;
 		transition: all 0.3s ease;
 		opacity: 0;
 		pointer-events: none;
 		transform: translateY(-20px);
+		height: 50px;
+		padding: 5px 0;
 
 		& .item {
 			display: inline-flex;
@@ -41,6 +43,9 @@ export const notificationsStyles = (theme) => css`
 			& span {
 				display: inline-flex;
 				padding: 8px 0 8px 12px;
+				overflow: hidden;
+				height: 100%;
+				line-height: 23px;
 			}
 
 			& .close-button {
@@ -52,6 +57,8 @@ export const notificationsStyles = (theme) => css`
 				transition: all 0.3s ease;
 				max-width: 40px;
 				width: 40px;
+				overflow: hidden;
+				height: 100%;
 
 				${theme.isDark
 					? css`
@@ -100,19 +107,13 @@ export const notificationsStyles = (theme) => css`
 		}
 
 		&.hidden {
-			opacity: 0;
-			pointer-events: none;
-			transform: translateY(-20px);
+			padding: 0;
+			height: 0;
 		}
-	}
-`;
 
-const animation = keyframes`
-	0% {
-		max-height: 100%;
-	}
-
-	100% {
-		max-height: 0;
+		&.static {
+			position: relative;
+			z-index: 10;
+		}
 	}
 `;

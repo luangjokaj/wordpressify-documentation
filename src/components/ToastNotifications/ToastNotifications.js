@@ -1,12 +1,10 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { ToastNotificationsContext } from "./ToastNotificationsContext";
 import * as styles from "./ToastNotifications.styles";
 import { Close } from "../../assets/svg/Close";
 
 function ToastNotifications() {
-	const { notifications, removeNotification } = useContext(
-		ToastNotificationsContext,
-	);
+	const { notifications } = useContext(ToastNotificationsContext);
 
 	return (
 		<ul css={(theme) => styles.notificationsStyles(theme)}>
@@ -18,15 +16,25 @@ function ToastNotifications() {
 }
 
 function NotificationItem(notification) {
-	const { removeNotification } = useContext(ToastNotificationsContext);
+	const [localStatus, setLocalStatus] = useState(true);
 	const elmRef = useRef();
+
+	const removeNotification = (i) => {
+		setLocalStatus(false);
+	};
+
 	if (notification.autoHide) {
 		setTimeout(() => {
-			elmRef.current?.click();
+			removeNotification(notification);
 		}, notification.autoHide);
 	}
+
 	return (
-		<li className={`${notification.status} ${notification.color}`}>
+		<li
+			className={`${localStatus ? notification.status : "hidden"} ${
+				notification.color
+			} ${!notification.autoHide && "static"}`}
+		>
 			<span className="item">
 				<span>{notification.text}</span>
 				<button

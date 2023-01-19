@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTheme } from "@emotion/react";
 import { Col, Container, Input, Row, Space, H1 } from "cherry-components";
 import Image from "next/image";
@@ -10,9 +10,12 @@ import { Features } from "../components/Features";
 import { Mockup } from "../components/Mockup";
 import { theme as themeLight } from "../assets/styles/theme";
 import { OverflowHidden } from "../components/Layout/OverflowHidden";
+import { ToastNotificationsContext } from "../components/ToastNotifications";
 
 function Index() {
 	const theme = useTheme();
+	const { addNotification } = useContext(ToastNotificationsContext);
+
 	return (
 		<Page title="A build system designed to automate your WordPress development workflow">
 			<Container theme={theme}>
@@ -50,6 +53,10 @@ function Index() {
 										document.getElementById("npm-package");
 									textBox.select();
 									document.execCommand("copy");
+									addNotification("Copied to clipboard", {
+										autoHide: 3500,
+										color: "success",
+									});
 								}}
 								spellCheck="false"
 								id="npm-package"

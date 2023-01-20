@@ -31,6 +31,7 @@ export const notificationsStyles = (theme) => css`
 			background: ${theme.colors.info};
 			border-radius: 6px;
 			margin: 0;
+			overflow: hidden;
 			${shadowStyles(theme)};
 			${theme.isDark
 				? css`
@@ -82,7 +83,16 @@ export const notificationsStyles = (theme) => css`
 
 				@media (hover: hover) {
 					&:hover {
-						background: ${rgba(theme.colors.light, 0.1)};
+						${theme.isDark
+							? css`
+									background: ${rgba(theme.colors.dark, 0.2)};
+							  `
+							: css`
+									background: ${rgba(
+										theme.colors.light,
+										0.2,
+									)};
+							  `}
 					}
 				}
 			}
@@ -97,6 +107,12 @@ export const notificationsStyles = (theme) => css`
 		&.success {
 			& .item {
 				background: ${theme.colors.success};
+			}
+		}
+
+		&.warning {
+			& .item {
+				background: ${theme.colors.warning};
 			}
 		}
 

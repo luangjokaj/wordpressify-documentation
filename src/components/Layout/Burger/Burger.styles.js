@@ -16,10 +16,10 @@ export const burgerStyles = (theme, isOpen) => css`
 
 	position: fixed;
 	z-index: 9999;
-	bottom: 15px;
-	right: 15px;
+	bottom: 20px;
+	right: 20px;
 	border-radius: 50%;
-	background: ${theme.colors.light};
+	background: ${theme.isDark ? theme.colors.dark : theme.colors.primary};
 	${shadowStyles(theme)};
 
 	${mq(Breakpoints.lg)} {
@@ -30,7 +30,7 @@ export const burgerStyles = (theme, isOpen) => css`
 		display: block;
 		width: 24px;
 		height: 2px;
-		background: ${theme.colors.primary};
+		background: ${theme.isDark ? theme.colors.primary : theme.colors.light};
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -43,7 +43,9 @@ export const burgerStyles = (theme, isOpen) => css`
 			display: block;
 			height: 2px;
 			width: 24px;
-			background: ${theme.colors.primary};
+			background: ${theme.isDark
+				? theme.colors.primary
+				: theme.colors.light};
 			position: absolute;
 			transition: all 0.3s ease;
 		}

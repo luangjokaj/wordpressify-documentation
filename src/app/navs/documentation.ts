@@ -10,6 +10,11 @@ export const docsIntroNav = [
     icon: "",
   },
   {
+    title: "Install WordPressify",
+    url: "/docs/install-wordpressify",
+    icon: "",
+  },
+  {
     title: "Start Project",
     url: "/docs/start-project",
     icon: "",

@@ -1,12 +1,22 @@
-[![WordPressify Logo](https://wordpressify.s3-eu-west-1.amazonaws.com/img/wordpressify-repository-logo.svg#3)](https://www.wordpressify.co/)
+# WordPressify Docs
 
-Automate your WordPress development workflow.
+This repository contains the documentation for WordPressify.
 
 ---
 
-# Documentation Website
+# Installation
 
-This website is built with Nextify. For full documentation, visit https://www.nextify.me.
+This project requires Node.js v20+ installed.
+
+```bash
+npm install
+```
+
+To run the development environment, use the following command:
+
+```bash
+npm run dev
+```
 
 ## Community
 
@@ -17,3 +27,4 @@ For help, discussion about best practices, or any other conversation that would 
 For casual chit-chat with others using WordPressify:
 
 [Join the Discord Server](https://discord.com/invite/uQFdMddMZw)
+

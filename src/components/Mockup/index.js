@@ -1,1 +1,0 @@
-export { Mockup } from "./Mockup";

@@ -1,0 +1,37 @@
+import { PAGE_DESCRIPTION, OG_IMAGE } from "@/app/utils/constants";
+
+export const metadata = {
+  title: "External Libraries - WordPressify - WordPress Development",
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    title: "External Libraries - WordPressify - WordPress Development",
+    description: PAGE_DESCRIPTION,
+    images: OG_IMAGE,
+  },
+};
+
+# External Libraries
+
+Incorporating external JavaScript libraries into WordPressify is straightforward. By installing the npm script and adding it to the gulpfile.js, you can seamlessly enhance your project with additional functionality.
+
+## JavaScript Bundles Configuration
+
+To manage the placement of JavaScript files effectively, WordPressify offers the flexibility to organize scripts for the header and footer sections:
+
+```javascript
+/* -------------------------------------------------------------------------------------------------
+Header & Footer JavaScript Bundles
+-------------------------------------------------------------------------------------------------- */
+const headerJS = [ './node_modules/jquery/dist/jquery.js' ];
+const footerJS = [ './src/assets/js/**' ];
+```
+
+# Script Placement Options
+- **Header Scripts:** Include scripts in the head of the page to load before the DOM is rendered by adding them to the headerJS array.
+- **Footer Scripts:** Place scripts in the footer of the page to load after the DOM is loaded by utilizing the footerJS array. Only footer scripts undergo processing with Babel, supporting ES6. However, you can configure this behavior to apply Babel to both header and footer scripts if needed.
+
+# Configuration Adjustment
+
+To modify the Babel processing behavior for header and footer scripts, you can adjust the configuration settings. Note that changes made to the configuration require a build restart to take effect.
+
+By following these guidelines, you can seamlessly integrate external JavaScript libraries into your WordPressify project, enhancing its functionality and customization options. This refined version maintains a professional tone while providing clear instructions on including external JavaScript libraries in WordPressify and configuring script placement for optimal performance.

@@ -1,0 +1,36 @@
+import { PAGE_DESCRIPTION, OG_IMAGE } from "@/app/utils/constants";
+
+export const metadata = {
+  title: "Deploy to Production - WordPressify - WordPress Development",
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    title: "Deploy to Production - WordPressify - WordPress Development",
+    description: PAGE_DESCRIPTION,
+    images: OG_IMAGE,
+  },
+};
+
+# Deploy to production
+
+To generate distribution files in WordPressify, you can use either:
+
+```bash
+npm run export
+```
+
+Alternatively, if NodeJS is not installed locally, utilize Docker commands:
+
+```bash
+docker compose run --rm nodejs npm run prod
+```
+
+These commands will generate all necessary files in a **dist** folder.
+
+# Deployment
+
+Deploying the generated files depends on where you intend to deploy them.
+Ensure to follow the deployment guidelines specific to your hosting environment.
+Consider factors like server configuration, file structure, and deployment methods when deploying your WordPress theme or plugin.
+
+By following these steps, you can efficiently generate distribution files in WordPressify and proceed with deploying your project based on your deployment requirements.
+

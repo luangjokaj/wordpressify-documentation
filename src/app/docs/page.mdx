@@ -1,0 +1,31 @@
+import { PAGE_DESCRIPTION, OG_IMAGE } from "@/app/utils/constants";
+import { Grid } from "cherry-styled-components/src/lib";
+import { Box } from "@/app/components/box";
+
+export const metadata = {
+  title: "Docs - Introduction - WordPressify - WordPress Development",
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    title: "Docs - Introduction - WordPressify - WordPress Development",
+    description: PAGE_DESCRIPTION,
+    images: OG_IMAGE,
+  },
+};
+
+# Introduction
+
+WordPressify is a development tool that simplifies WordPress theme and plugin creation:
+
+- Development Server: Runs PHP under a proxy with BrowserSync.
+- Database: Utilizes a pre-configured MariaDB database.
+- Real-time Updates: Watches for changes and reloads the webpage instantly.
+- Preprocessing: Styles with PostCSS or Sass, JavaScript with Babel compiler.
+- Customization: Supports source maps, external libraries, npm scripts, and gulp tasks.
+
+WordPressify is compatible with macOS, Windows, and Linux, requiring only Docker as the primary dependency. This revised text maintains a professional tone and provides a structured overview of the product documentation, incorporating key details from the search results provided.
+
+<Grid $xsCols={1} $lgCols={2}>
+  <Box $title="Install Docker" $text="Only one dependency." href="/docs/install-docker" />
+  <Box $title="Start Project" $text="Everything you need to start." href="/docs/start-project" />
+</Grid>
+

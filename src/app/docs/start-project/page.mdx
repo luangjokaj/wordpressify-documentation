@@ -1,0 +1,96 @@
+import { PAGE_DESCRIPTION, OG_IMAGE } from "@/app/utils/constants";
+
+export const metadata = {
+  title: "Start Project - WordPressify - WordPress Development",
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    title: "Start Project - WordPressify - WordPress Development",
+    description: PAGE_DESCRIPTION,
+    images: OG_IMAGE,
+  },
+};
+
+# Start project
+Prior to proceeding, ensure that Docker is operational to prevent any failures.
+
+The main file structure includes essential directories and files that are crucial for managing the WordPress theme development workflow. Here is a breakdown of the key components to highlight:
+
+- **Theme Folder (src/theme/)** <br /> This directory contains PHP/HTML template files that define the structure and layout of the WordPress theme.
+- **Plugins (src/plugins/)** <br /> This directory houses all custom-developed plugins specifically tailored for the WordPress theme. Custom plugins can be created and stored within this folder to extend the functionality and features of the theme.
+- **CSS (src/assets/css/)** <br /> Contains CSS files responsible for styling the theme.
+- **Fonts (src/assets/fonts/)** <br /> Stores font files used in the theme for text styling.
+- **Images (src/assets/img/)** <br /> Holds image utilized within the theme design.
+- **JavaScript (src/assets/js/)** <br /> Contains JavaScript files that provide interactivity and dynamic functionality.
+
+These directories play a crucial role in organizing and managing the various assets and components of the WordPress theme. Additionally, the repoository includes configuration files, build files, distribution files, and Docker-related files to streamline the development process effectively.
+
+# Change Template Name
+Before starting, customize your template name by creating renameing **.env_example** to **.env** and replace the variable name.
+
+```bash
+# If you want to connect to BrowserSync on a different port. Default: 3010
+PROXY_PORT=3010
+
+# Theme name. Default: "wordpressify"
+THEME_NAME=wordpressify
+```
+
+# Start Workflow
+To initiate the development server, use the following command:
+```bash
+npm run start
+```
+
+If NodeJS is not installed locally, utilize Docker commands:
+
+
+```bash
+docker compose up
+```
+
+Ensure Docker is running to avoid any command failures.
+
+# Rebuild Environment
+To rebuild the WordPressify environment with a fresh installation and clean database, run:
+
+```bash
+npm run rebuild
+```
+
+For non-local NodeJS installations, use Docker commands:
+
+```bash
+docker compose down -v && docker compose build
+```
+
+# WordPress Plugins
+
+For adding or building WordPress plugins, navigate to the directory:
+
+```bash
+src/plugins
+```
+
+# Production Template
+
+To generate distribution files, execute:
+
+```bash
+npm run export
+```
+
+For non-local NodeJS setups, use Docker commands:
+
+
+```bash
+docker compose run --rm nodejs npm run prod
+```
+
+The template will be saved as a zip file in:
+
+```bash
+dist/wordpressify.zip
+```
+
+You are now equipped to delve into your WordPress development journey. Happy coding!
+

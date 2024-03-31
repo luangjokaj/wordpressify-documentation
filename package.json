@@ -1,54 +1,46 @@
 {
-	"name": "wordpressify-documentation",
-	"version": "0.0.1",
-	"description": "WordPressify documentation website.",
-	"main": "index.js",
-	"author": "Luan Gjokaj <luan@riangle.com>",
-	"homepage": "https://www.wordpressify.co",
-	"repository": "https://github.com/luangjokaj/wordpressify",
-	"license": "MIT",
-	"keywords": [
-		"babel",
-		"boilerplate",
-		"build",
-		"css",
-		"es6",
-		"front-end",
-		"gulp",
-		"javascript",
-		"node",
-		"postcss",
-		"sass",
-		"web",
-		"website",
-		"wordpress",
-		"wordpressify",
-		"workflow"
-	],
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"export": "next export",
-		"lint": "next lint",
-		"format": "prettier --write \"./**/*.{js,json,ts,tsx}\" \"!.node_modules/**\" \"!.next/**\"",
-		"analyze": "ANALYZE=true next build",
-		"analyze:server": "BUNDLE_ANALYZE=server next build",
-		"analyze:browser": "BUNDLE_ANALYZE=browser next build"
-	},
-	"dependencies": {
-		"@emotion/babel-plugin": "^11.11.0",
-		"@emotion/react": "^11.11.4",
-		"@next/bundle-analyzer": "^14.1.4",
-		"cherry-components": "^0.0.2-23",
-		"express": "^4.19.1",
-		"next": "^14.1.4",
-		"nprogress": "^0.2.0",
-		"polished": "^4.3.1",
-		"prettier": "^3.2.5",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-markdown": "^9.0.1",
-		"react-syntax-highlighter": "^15.5.0"
-	}
+  "name": "wordpressify-documentation",
+  "version": "0.1.0",
+  "private": false,
+  "author": "Luan Gjokaj <luan@riangle.com>",
+  "homepage": "https://www.wordpressify.co",
+  "repository": "https://github.com/luangjokaj/wordpressify-documentation",
+  "license": "MIT",
+  "keywords": [
+    "wordpressify",
+    "build",
+    "css",
+    "js",
+    "documentation",
+    "design",
+    "design system"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""
+  },
+  "dependencies": {
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@docsearch/react": "^3.6.0",
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.1.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cherry-styled-components": "^0.1.0-16",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "polished": "^4.3.1",
+    "prettier": "^3.2.5",
+    "rehype-highlight": "^7.0.0",
+    "styled-components": "^6.1.8",
+    "typescript": "^5"
+  }
 }

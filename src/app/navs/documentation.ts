@@ -70,7 +70,7 @@ export const docsBuildUtilitiesNav = [
 export const docsProductionNav = [
   {
     title: "Deploy to Production",
-    url: "/docs/deploy-to-production",
+    url: "/docs/deploy-production",
     icon: "",
   },
 ];

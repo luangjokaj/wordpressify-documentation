@@ -2,8 +2,9 @@
 import React, { useContext } from "react";
 import styled, { useTheme } from "styled-components";
 import Link from "next/link";
-import { mq, Container, Flex, resetButton, ThemeContext } from "cherry-styled-components/src/lib";
+import { mq, Container, Flex, resetButton } from "cherry-styled-components/src/lib";
 import { Theme } from "cherry-styled-components/src/lib";
+import { ThemeContext } from "@/app/components/theme-provider";
 import { rgba } from "polished";
 import { themeDark, theme as themeLight } from "@/app/theme";
 import { Search } from "./search";
@@ -193,9 +194,11 @@ function Header() {
                   if (theme.isDark) {
                     setTheme(themeLight);
                     localStorage.theme = "light";
+                    document.documentElement.setAttribute("data-theme", "light");
                   } else {
                     setTheme(themeDark);
                     localStorage.theme = "dark";
+                    document.documentElement.setAttribute("data-theme", "dark");
                   }
                 }}
               >

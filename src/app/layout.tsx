@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
 import { Header } from "@/app/components/header";
 import { MinHeight } from "@/app/components/min-height";
-import { StyledComponentsRegistry, CherryThemeProvider } from "cherry-styled-components/src/lib";
+import { StyledComponentsRegistry } from "cherry-styled-components/src/lib";
 import { theme, themeDark } from "@/app/theme";
 import Script from "next/script";
+import { CherryThemeProvider } from "@/app/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 

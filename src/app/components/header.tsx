@@ -8,7 +8,7 @@ import { ThemeContext } from "@/app/components/theme-provider";
 import { rgba } from "polished";
 import { themeDark, theme as themeLight } from "@/app/theme";
 import { Search } from "./search";
-import { IconWordPressify, IconGitHub, IconMoon, IconSun } from "./icons";
+import { IconWordPressify, IconGitHub, IconMoon, IconSun, IconPictogram } from "./icons";
 
 const StyledHeader = styled.header<{ theme: Theme }>`
   background: ${({ theme }) =>
@@ -67,11 +67,25 @@ const StyledLink = styled(Link)<{ theme: Theme }>`
   }
 
   & .logo {
-    width: 150px;
+    display: none;
     height: auto;
 
     ${mq("lg")} {
       width: 210px;
+      display: block;
+    }
+  }
+
+  & .mobile:not(.logo) {
+    width: 32px;
+    height: 32px;
+
+    & path {
+      fill: ${({ theme }) => theme.colors.primary};
+    }
+
+    ${mq("lg")} {
+      display: none;
     }
   }
 
@@ -175,6 +189,7 @@ function Header() {
           <Flex $justifyContent="space-between" $wrap="nowrap">
             <StyledLink href="/" aria-label="Wordpressify Logo">
               <IconWordPressify className="logo" />
+              <IconPictogram className="mobile" />
             </StyledLink>
             <StyledNav>
               <Search />

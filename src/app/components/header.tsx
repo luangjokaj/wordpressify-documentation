@@ -176,6 +176,7 @@ function Header() {
               <IconWordPressify className="logo" />
             </StyledLink>
             <StyledNav>
+              <Search />
               <StyledLink href="/docs" aria-label="Documentation">
                 Docs
               </StyledLink>

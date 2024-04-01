@@ -4,7 +4,11 @@ import "@docsearch/css";
 
 function Search() {
   return (
-    <DocSearch appId="KETBUPPLSS" indexName="cherry" apiKey="9e5d9817ccd10d9dd9728696b2abf1eb" />
+    <DocSearch
+      appId="U06HTN08M5"
+      indexName="wordpressify"
+      apiKey="ba578a752d4a5fd93c5aefba378d6a9d"
+    />
   );
 }
 

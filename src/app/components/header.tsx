@@ -67,11 +67,11 @@ const StyledLink = styled(Link)<{ theme: Theme }>`
   }
 
   & .logo {
-    width: 208px;
+    width: 150px;
     height: auto;
 
     ${mq("lg")} {
-      width: 208px;
+      width: 210px;
     }
   }
 

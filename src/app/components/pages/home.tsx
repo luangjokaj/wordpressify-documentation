@@ -245,9 +245,7 @@ function Home() {
           </IconLink>
         </Flex>
         <Space $size={100} />
-        <LinkButton $variant="secondary" href="/docs">
-          Get Started
-        </LinkButton>
+        <LinkButton href="/docs">Get Started</LinkButton>
       </Container>
       <Footer />
     </StyledBringOnTop>

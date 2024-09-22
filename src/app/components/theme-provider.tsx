@@ -41,7 +41,7 @@ function CherryThemeProvider({
   return (
     <StyledThemeProvider theme={currentTheme}>
       <ThemeContext.Provider value={{ setTheme }}>
-        <GlobalStylesComponent theme={currentTheme} />
+        <GlobalStylesComponent />
         {children}
       </ThemeContext.Provider>
     </StyledThemeProvider>

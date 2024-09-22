@@ -2,12 +2,11 @@
 import React, { useContext } from "react";
 import styled, { useTheme } from "styled-components";
 import Link from "next/link";
-import { mq, Container, Flex, resetButton } from "cherry-styled-components/src/lib";
-import { Theme } from "cherry-styled-components/src/lib";
-import { ThemeContext } from "@/app/components/theme-provider";
+import { Theme, mq, Container, Flex, resetButton } from "cherry-styled-components/src/lib";
 import { rgba } from "polished";
+import { ThemeContext } from "@/app/components/theme-provider";
 import { themeDark, theme as themeLight } from "@/app/theme";
-import { Search } from "./search";
+import { Search } from "@/app/components/search";
 import { IconWordPressify, IconGitHub, IconMoon, IconSun, IconPictogram } from "./icons";
 
 const StyledHeader = styled.header<{ theme: Theme }>`

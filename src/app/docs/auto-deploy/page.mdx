@@ -1,0 +1,84 @@
+import { PAGE_DESCRIPTION, OG_IMAGE } from "@/app/utils/constants";
+
+export const metadata = {
+  title: "Auto Deploy - WordPressify - WordPress Development",
+  description: PAGE_DESCRIPTION,
+  openGraph: {
+    title: "Auto Deploy - WordPressify - WordPress Development",
+    description: PAGE_DESCRIPTION,
+    images: OG_IMAGE,
+  },
+};
+
+# Auto Deploy
+
+To automatically deploy your WordPressify project, you can use GitHub Actions.
+
+## GitHub Actions
+
+1. Create a new GitHub repository for your WordPressify project.
+2. Create a new GitHub Actions workflow file in the root directory of your project: <code>.github/workflows/deploy.yml</code>.
+3. Copy the following code into the workflow file:
+
+```yaml
+name: Deploy WordPressify
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm run build
+
+      - name: Build theme
+        run: |
+          npm run export
+
+      - name: Set permissions
+        run: |
+          sudo chown -R $USER:$USER ./dist
+          chmod -R 755 ./dist
+          mkdir -p dist/themes/theme-name
+          touch dist/themes/theme-name/.ftp-deploy-sync-state.json
+          chmod 666 dist/themes/theme-name/.ftp-deploy-sync-state.json
+
+      - name: Deploy to WordPress
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/themes/theme-name/
+          server-dir: /public_html/wp-content/themes/theme-name/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/src/**
+            gulpfile.js
+            package.json
+            package-lock.json
+```
+
+- Make sure to add <code>FTP_SERVER</code>, <code>FTP_USERNAME</code>, and <code>FTP_PASSWORD</code> to your GitHub repository's secrets.
+- Replace all instances of the <code>theme-name</code> with the actual name of your WordPress theme.
+- Make sure to have an empty file in the <code>src/plugins</code> directory. If the directory is empty, the deployment will fail.
+
+## Triggering the Deployment
+
+4. Commit and push your changes to the <code>main</code> branch.
+5. Your WordPressify project will now automatically deploy to your WordPress site whenever you push changes to the main branch.
+

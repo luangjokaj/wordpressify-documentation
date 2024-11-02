@@ -69,8 +69,13 @@ export const docsBuildUtilitiesNav = [
 
 export const docsProductionNav = [
   {
-    title: "Deploy to Production",
-    url: "/docs/deploy-production",
+    title: "Distribution Files",
+    url: "/docs/distribution-files",
+    icon: "",
+  },
+  {
+    title: "Auto Deploy",
+    url: "/docs/auto-deploy",
     icon: "",
   },
 ];

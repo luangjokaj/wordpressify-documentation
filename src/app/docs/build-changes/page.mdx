@@ -14,18 +14,18 @@ export const metadata = {
 
 Any modifications to the following list of files necessitate a restart of the containers in WordPressify:
 
-- Nginx & PHP Configurations: Located in the **config/** directory.
-- Babel Configuration: Stored in **.babelrc**.
-- Docker Ignore File: Found in **.dockerignore**.
-- Environment Variables: Managed in **.env**.
-- Docker Compose Configuration: Defined in **docker-compose.yml**.
-- Node.js Dockerfile: Specified in **Dockerfile-nodejs**.
-- WordPress Dockerfile: Set up in **Dockerfile-wordpress**.
-- Gulp Configuration: Detailed in **gulpfile.js**.
-- Node.js Packages: Listed in **package.json**.
+- Nginx & PHP Configurations: Located in the <code>config/</code> directory.
+- Babel Configuration: Stored in <code>.babelrc</code>.
+- Docker Ignore File: Found in <code>.dockerignore</code>.
+- Environment Variables: Managed in <code>.env</code>.
+- Docker Compose Configuration: Defined in <code>docker-compose.yml</code>.
+- Node.js Dockerfile: Specified in <code>Dockerfile-nodejs</code>.
+- WordPress Dockerfile: Set up in <code>Dockerfile-wordpress</code>.
+- Gulp Configuration: Detailed in <code>gulpfile.js</code>.
+- Node.js Packages: Listed in <code>package.json</code>.
 
 # Restart Instructions
-If WordPressify is currently running, exit the process using **CTRL/CMD+C**. To apply the changes, rebuild by executing the command:
+If WordPressify is currently running, exit the process using <code>CTRL/CMD+C</code>. To apply the changes, rebuild by executing the command:
 
 ```bash
 npm run build

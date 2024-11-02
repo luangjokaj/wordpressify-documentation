@@ -63,6 +63,13 @@ const StyledContent = styled.div<ContentProps>`
     }
   }
 
+  & code:not([class]) {
+    display: inline;
+    border-radius: ${({ theme }) => theme.spacing.radius.xs};
+    border: solid 1px ${({ theme }) => theme.colors.grayDark};
+    font-family: ${({ theme }) => theme.fonts.mono};
+  }
+
   & button,
   & h1,
   & h2,

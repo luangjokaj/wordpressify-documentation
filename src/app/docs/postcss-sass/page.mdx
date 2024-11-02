@@ -14,12 +14,12 @@ export const metadata = {
 
 WordPressify seamlessly integrates with PostCSS, a powerful preprocessor offering enhanced functionality compared to Sass and Less. Notably, PostCSS boasts impressive speed, being three times faster than Sass and four times faster than Less. Its versatility lies in the form of PostCSS plugins, akin to Lego pieces that can transform CSS features. With PostCSS, you can assemble these plugins to create a customized feature set, adjusting them as needed.
 
-- Development Environment Plugins (**pluginsListDev**):
+- **Development Environment Plugins** <code>pluginsListDev</code>:
   - partialimport
   - postcssPresetEnv
   - postCSSMixins
   - autoprefixer
-- Production Task Plugins (**pluginsListProd**):
+- **Production Task Plugins** <code>pluginsListProd</code>:
   - partialimport
   - postcssPresetEnv
   - postCSSMixins
@@ -39,13 +39,13 @@ This file serves as the starting point for CSS styling, including template defin
 
 WordPressify offers flexibility by supporting Sass as the primary CSS preprocessor. To utilize Sass:
 
-- Install Sass and gulp-sass:
+- Install <code>sass</code> and <code>gulp-sass</code>:
 
 ```bash
 npm install sass gulp-sass
 ```
 
-- Include Sass in gulpfile.js:
+- Include the <code>sass</code> and <code>gulp-sass</code> in <code>gulpfile.js</code>:
 
 ```javascript
 import dartSass from 'sass';
@@ -53,7 +53,7 @@ import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 ```
 
-- Update the stylesDev gulp task to:
+- Update the <code>stylesDev</code> gulp task to:
 
 ```javascript
 function stylesDev() {
@@ -65,13 +65,13 @@ function stylesDev() {
 	 .pipe(browserSync.stream({ match: '**/*.css' }));
 }
 ```
-Modify the watch task to monitor .scss filetypes:
+Modify the watch task to monitor <code>.scss</code> filetypes:
 
 ```javascript
 watch('./src/assets/css/**/*.scss', stylesDev);
 ```
 
-- Adjust the stylesProd gulp task to:
+- Adjust the <code>stylesProd</code> gulp task to:
 
 ```javascript
 function stylesProd() {

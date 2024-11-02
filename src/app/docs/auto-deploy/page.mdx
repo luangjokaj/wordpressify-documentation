@@ -76,8 +76,9 @@ jobs:
 
 - Make sure to add <code>FTP_SERVER</code>, <code>FTP_USERNAME</code>, and <code>FTP_PASSWORD</code> to your GitHub repository's secrets.
 - Make sure to add <code>THEME_NAME</code> to your GitHub repository's variables. This is the name of your WordPress theme directory.
+- Make sure the <code>.env</code> file is commited to your repository and contains the value for <code>THEME_NAME</code>. Do not include any sensitive information.
 - Make sure to double check the <code>server-dir</code> path in the FTP-Deploy-Action step. This is the path to your WordPress theme directory on your server.
--  Make sure to have an empty file in the <code>src/plugins</code> directory. If the directory is empty, the deployment will fail.
+- Make sure to have at least one file in the <code>src/plugins</code> directory, even if it's an empty file. If the directory is empty, the deployment will fail.
 
 ## Triggering the Deployment
 

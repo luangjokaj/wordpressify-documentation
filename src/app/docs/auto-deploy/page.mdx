@@ -26,13 +26,14 @@ on:
   push:
     branches:
       - main
+env:
+  THEME_NAME: ${{ vars.THEME_NAME }} # Define theme name as environment variable
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -51,9 +52,9 @@ jobs:
         run: |
           sudo chown -R $USER:$USER ./dist
           chmod -R 755 ./dist
-          mkdir -p dist/themes/theme-name
-          touch dist/themes/theme-name/.ftp-deploy-sync-state.json
-          chmod 666 dist/themes/theme-name/.ftp-deploy-sync-state.json
+          mkdir -p dist/themes/${{ env.THEME_NAME }}
+          touch dist/themes/${{ env.THEME_NAME }}/.ftp-deploy-sync-state.json
+          chmod 666 dist/themes/${{ env.THEME_NAME }}/.ftp-deploy-sync-state.json
 
       - name: Deploy to WordPress
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -61,8 +62,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/themes/theme-name/
-          server-dir: /public_html/wp-content/themes/theme-name/
+          local-dir: ./dist/themes/${{ env.THEME_NAME }}/
+          server-dir: /public_html/wp-content/themes/${{ env.THEME_NAME }}/
           exclude: |
             **/.git*
             **/.git*/**
@@ -74,11 +75,55 @@ jobs:
 ```
 
 - Make sure to add <code>FTP_SERVER</code>, <code>FTP_USERNAME</code>, and <code>FTP_PASSWORD</code> to your GitHub repository's secrets.
-- Replace all instances of the <code>theme-name</code> with the actual name of your WordPress theme.
-- Make sure to have an empty file in the <code>src/plugins</code> directory. If the directory is empty, the deployment will fail.
+- Make sure to add <code>THEME_NAME</code> to your GitHub repository's variables. This is the name of your WordPress theme directory.
+- Make sure to double check the <code>server-dir</code> path in the FTP-Deploy-Action step. This is the path to your WordPress theme directory on your server.
+-  Make sure to have an empty file in the <code>src/plugins</code> directory. If the directory is empty, the deployment will fail.
 
 ## Triggering the Deployment
 
 4. Commit and push your changes to the <code>main</code> branch.
 5. Your WordPressify project will now automatically deploy to your WordPress site whenever you push changes to the main branch.
+
+# Setup GitHub Actions
+
+Here's how to set up both the theme name variable and all required secrets for the workflow:
+
+**Go to your GitHub repository settings:**
+
+- Click on "Settings" tab in your repository
+- Click on "Secrets and variables" → "Actions"
+
+
+**Set up the theme name variable:**
+
+- Click on "Variables" tab
+- Click "New repository variable"
+- Create variable:
+  - Name: <code>THEME_NAME</code>
+  - Value: Your theme name  (e.g., "my-awesome-theme")
+
+
+**Set up the FTP secrets:**
+
+- Click on "Secrets" tab
+- Click "New repository secret"
+- Add these three secrets:
+
+```
+FTP_SERVER
+Value: your-domain.com or ftp.your-domain.com
+
+FTP_USERNAME
+Value: your-ftp-username
+
+FTP_PASSWORD
+Value: your-ftp-password
+```
+
+### Remember:
+
+- Secrets are encrypted and can't be viewed once saved
+- You can update secrets anytime by creating a new one with the same name
+- The workflow will automatically use the updated values
+- Never commit these credentials to your repository
 

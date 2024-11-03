@@ -15,5 +15,17 @@ export const metadata = {
 
 To ensure WordPressify runs consistently across all platforms (Linux, Windows, and macOS), it is essential to have Docker installed. Docker provides a standardized environment for running applications, ensuring uniformity in performance regardless of the operating system. By having Docker installed, WordPressify can maintain its functionality seamlessly cross platform.
 
+# Enviroment Variables
+
+WordPressify on Windows requires the following environment variable to be set, you can do that by editing the <code>.env</code> file:
+
+```bash
+# Use polling for file watcher. Default: false
+# Windows users should set this to true
+USE_POLLING=true
+```
+
+Change the value of <code>USE_POLLING</code> to <code>true</code> to enable polling. This will ensure that the file watcher works correctly on Windows.
+
 <Box $title="Install Docker" $text="Only one dependency." href="/docs/install-docker" />
 

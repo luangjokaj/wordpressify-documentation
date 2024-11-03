@@ -218,6 +218,46 @@ function Home() {
               </StyledParagraph>
             </TileContent>
           </Tile>
+          <Tile $variant="secondary">
+            <TileImage>
+              <Image src="4-styles.svg" alt="External Libraries Icon" width={72} height={72} />
+            </TileImage>
+            <TileContent>
+              <StyledStrong>CSS Styles and JavaScript</StyledStrong>
+              <Space $size={10} />
+              <StyledParagraph>
+                Process your CSS with PostCSS or Sass. Write modern ES6 JavaScript with Babel and
+                use external libraries with ease, even from NPM.
+              </StyledParagraph>
+            </TileContent>
+          </Tile>
+          <Tile $variant="tertiary">
+            <TileImage>
+              <Image src="5-debugging.svg" alt="Debugging Icon" width={72} height={72} />
+            </TileImage>
+            <TileContent>
+              <StyledStrong>Source Maps & Debugging</StyledStrong>
+              <Space $size={10} />
+              <StyledParagraph>
+                WordPressify integrates Source Maps and provides a seamless debugging experience,
+                for CSS and JavaScript. For PHP, you can utilize Xdebug to debug your code.
+              </StyledParagraph>
+            </TileContent>
+          </Tile>
+          <Tile $variant="primary">
+            <TileImage>
+              <Image src="6-prod.svg" alt="Production Icon" width={72} height={72} />
+            </TileImage>
+            <TileContent>
+              <StyledStrong>Optimized Distribution Files</StyledStrong>
+              <Space $size={10} />
+              <StyledParagraph>
+                WordPressify generates optimized production files for your WordPress theme. These
+                files are minified and can be auto deployed to your WordPress site with GitHub
+                Actions.
+              </StyledParagraph>
+            </TileContent>
+          </Tile>
         </Grid>
         <Space $size={100} />
         <StyledH3>Join the community</StyledH3>

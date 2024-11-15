@@ -20,6 +20,8 @@ To automatically deploy your WordPressify project, you can use GitHub Actions.
 2. Create a new GitHub Actions workflow file in the root directory of your project: <code>.github/workflows/deploy.yml</code>.
 3. Copy the following code into the workflow file:
 
+## Deploy with FTP
+
 ```yaml
 name: Deploy WordPressify
 on:
@@ -75,10 +77,76 @@ jobs:
 ```
 
 - Make sure to add <code>FTP_SERVER</code>, <code>FTP_USERNAME</code>, and <code>FTP_PASSWORD</code> to your GitHub repository's secrets.
+
+## Deploy with SSH
+
+```yaml
+name: Deploy WordPressify
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  THEME_NAME: ${{ vars.THEME_NAME }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm run build
+
+      - name: Build theme
+        run: |
+          npm run export
+
+      - name: Set permissions
+        run: |
+          sudo chown -R $USER:$USER ./dist
+          chmod -R 755 ./dist
+          mkdir -p dist/themes/${{ env.THEME_NAME }}
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+      - name: Deploy to WordPress via SSH
+        run: |
+          rsync -avz --delete \
+            -e "ssh -p 10056" \
+            --exclude '.git*' \
+            --exclude '.git*/**' \
+            --exclude 'node_modules/**' \
+            --exclude 'src/**' \
+            --exclude 'gulpfile.js' \
+            --exclude 'package.json' \
+            --exclude 'package-lock.json' \
+            ./dist/themes/${{ env.THEME_NAME }}/ \
+            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/var/www/riangle/wordpress/wp-content/themes/${{ env.THEME_NAME }}/
+```
+
+- Make sure to add <code>SSH_HOST</code>, <code>SSH_USERNAME</code>, <code>SSH_KNOWN_HOSTS</code>, and <code>SSH_PRIVATE_KEY</code> to your GitHub repository's secrets.
+
+---
+
 - Make sure to add <code>THEME_NAME</code> to your GitHub repository's variables. This is the name of your WordPress theme directory.
 - Make sure the <code>.env</code> file is commited to your repository and contains the value for <code>THEME_NAME</code>. Do not include any sensitive information.
 - Make sure to double check the <code>server-dir</code> path in the FTP-Deploy-Action step. This is the path to your WordPress theme directory on your server.
 - Make sure to have at least one file in the <code>src/plugins</code> directory, even if it's an empty file. If the directory is empty, the deployment will fail.
+
 
 ## Triggering the Deployment
 

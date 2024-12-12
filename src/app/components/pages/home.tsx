@@ -300,7 +300,9 @@ function Home() {
           keep visitors engaged and boost search rankings.
         </StyledParagraph>
         <Space $size={100} />
-        <LinkButton href="https://www.hostbox.me/">Hostbox Web Hosting</LinkButton>
+        <LinkButton href="https://www.hostbox.me/?ref=wordpressify.co">
+          Hostbox Web Hosting
+        </LinkButton>
       </Container>
       <Footer />
     </StyledBringOnTop>

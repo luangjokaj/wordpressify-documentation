@@ -109,6 +109,11 @@ function Footer() {
             <a href="https://www.riangle.com/?ref=wordpressify.co" target="_blank">
               Riangle
             </a>
+            <br />
+            WordPress hosting by{" "}
+            <a href="https://www.hostbox.me/?ref=wordpressify.co" target="_blank">
+              Hostbox
+            </a>
             .<br />
             Created by{" "}
             <a href="https://www.threads.net/@luangjokaj?ref=wordpressify.co" target="_blank">

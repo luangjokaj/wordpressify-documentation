@@ -114,12 +114,11 @@ function Footer() {
             <a href="https://www.hostbox.me/?ref=wordpressify.co" target="_blank">
               Hostbox
             </a>
-            .<br />
+            <br />
             Created by{" "}
             <a href="https://www.threads.net/@luangjokaj?ref=wordpressify.co" target="_blank">
               Luan Gjokaj
             </a>
-            .
           </StyledParagraph>
           <Flex $xsJustifyContent="center" $lgJustifyContent="flex-end">
             <Space $xs={20} $lg="none" />

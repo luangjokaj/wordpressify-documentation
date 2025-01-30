@@ -37,7 +37,7 @@
     "cherry-styled-components": "^0.1.0-43",
     "eslint-config-next": "15.1.6",
     "polished": "^4.3.1",
-    "posthog-js": "^1.211.2",
+    "posthog-js": "^1.212.1",
     "prettier": "^3.4.2",
     "rehype-highlight": "^7.0.1",
     "styled-components": "^6.1.14",

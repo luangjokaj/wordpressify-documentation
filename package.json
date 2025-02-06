@@ -37,10 +37,10 @@
     "cherry-styled-components": "^0.1.0-43",
     "eslint-config-next": "15.1.6",
     "polished": "^4.3.1",
-    "posthog-js": "^1.215.3",
+    "posthog-js": "^1.215.5",
     "prettier": "^3.4.2",
     "rehype-highlight": "^7.0.2",
-    "styled-components": "^6.1.14",
+    "styled-components": "^6.1.15",
     "typescript": "^5"
   }
 }

@@ -28,7 +28,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
-    "@docsearch/react": "^3.8.3",
+    "@docsearch/react": "^3.9.0",
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^15.1.7",
     "@types/node": "^22",
@@ -37,7 +37,7 @@
     "cherry-styled-components": "^0.1.0-43",
     "eslint-config-next": "15.1.7",
     "polished": "^4.3.1",
-    "posthog-js": "^1.219.4",
+    "posthog-js": "^1.219.6",
     "prettier": "^3.5.1",
     "rehype-highlight": "^7.0.2",
     "styled-components": "^6.1.15",
